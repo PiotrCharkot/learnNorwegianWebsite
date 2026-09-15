@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norwegian Irregular Verbs Table – Bokmål | Learn Norwegian</title>
+  <meta name="description" content="Complete searchable table of Norwegian irregular (strong) verbs in Bokmål: infinitive, present tense, past tense, and past participle. 120+ verbs grouped by class.">
+  <meta name="keywords" content="Norwegian irregular verbs, sterke verb norsk, Norwegian strong verbs, Bokmål verb table, Norwegian past tense, learn Norwegian grammar">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" type="image/png" href="../../assets/favicon.ico">
+  <style>
+    .tool-hero {
+      background: linear-gradient(90deg, #00308f, #007FFF);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .tool-hero h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    .tool-hero p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .tool-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 5rem;
+    }
+    .note-box {
+      background: #eef4ff;
+      border-left: 4px solid #007FFF;
+      padding: 0.85rem 1.2rem;
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: #333;
+    }
+    .search-wrap {
+      margin-bottom: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    #verbSearch {
+      flex: 1;
+      min-width: 220px;
+      padding: 0.65rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #007FFF;
+      border-radius: 6px;
+      outline: none;
+      font-family: Arial, sans-serif;
+    }
+    #verbSearch:focus {
+      border-color: #00308f;
+      box-shadow: 0 0 0 3px rgba(0,127,255,0.15);
+    }
+    #clearBtn {
+      padding: 0.65rem 1.1rem;
+      background: #007FFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-family: Arial, sans-serif;
+    }
+    #clearBtn:hover { background: #00308f; }
+    #resultCount {
+      font-size: 0.85rem;
+      color: #666;
+    }
+    .verb-section {
+      margin-bottom: 2.5rem;
+    }
+    .verb-section h3 {
+      font-size: 1.15rem;
+      color: #00308f;
+      border-left: 4px solid #007FFF;
+      padding-left: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .verb-section .class-desc {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 0.75rem;
+      padding-left: 0.5rem;
+    }
+    .verb-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .verb-table thead th {
+      background: linear-gradient(90deg, #00308f, #0055cc);
+      color: white;
+      padding: 0.7rem 1rem;
+      text-align: left;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+    }
+    .verb-table tbody tr {
+      border-bottom: 1px solid #eee;
+      transition: background 0.15s;
+    }
+    .verb-table tbody tr:last-child { border-bottom: none; }
+    .verb-table tbody tr:hover { background: #f0f7ff; }
+    .verb-table tbody td {
+      padding: 0.6rem 1rem;
+      color: #222;
+    }
+    .verb-table tbody td:first-child {
+      font-weight: bold;
+      color: #00308f;
+    }
+    .verb-table tbody tr.hidden { display: none; }
+
+    .no-results {
+      text-align: center;
+      color: #888;
+      padding: 2rem;
+      font-size: 1rem;
+      display: none;
+    }
+
+    .cta-banner {
+      background: linear-gradient(90deg, #00308f, #007FFF);
+      color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta-banner h3 { color: white; margin-bottom: 0.5rem; }
+    .cta-banner p { opacity: 0.9; margin-bottom: 1.2rem; }
+    .cta-banner .store-links { display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .cta-banner .store-links a img { height: 40px; border-radius: 8px; }
+
+    @media (max-width: 600px) {
+      .verb-table thead th, .verb-table tbody td { padding: 0.5rem 0.5rem; font-size: 0.82rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Learn Norwegian</h1>
+      <div class="links">
+        <a href="../../index.html#download">Download</a>
+        <a href="../../index.html#features">Features</a>
+        <a href="../faq.html">FAQ</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../tools.html" style="font-weight:bold;">Tools</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="tool-hero">
+    <h2>Norwegian Irregular Verbs</h2>
+    <p>120+ common irregular (strong) verbs in Norwegian Bokmål — with infinitive, present tense, past tense, and past participle. Searchable and grouped by vowel-change class.</p>
+  </div>
+
+  <div class="tool-container">
+
+    <div class="note-box">
+      📌 <strong>Bokmål forms only.</strong> These are the standard written Bokmål forms. Some verbs have alternative acceptable forms; the most common variant is listed. Irregular verbs are verbs that don't follow the regular <em>-et/-te/-de</em> pattern — they change their stem vowel (strong verbs) or have other irregular forms.
+    </div>
+
+    <div class="search-wrap">
+      <input type="text" id="verbSearch" placeholder="Search verbs — e.g. løpe, ran, kjørt…" autocomplete="off" spellcheck="false">
+      <button id="clearBtn" onclick="clearSearch()">Clear</button>
+      <span id="resultCount"></span>
+    </div>
+
+    <div id="noResults" class="no-results">No verbs found matching your search. Try a different form.</div>
+
+    <!-- CLASS I: i → ei/ai → i/e (drive/ride/bite/write type) -->
+    <div class="verb-section" data-class="1">
+      <h3>Class I — Vowel pattern: i → ei/ai → i</h3>
+      <p class="class-desc">Stem vowel <em>i</em> in infinitive → <em>ei</em> or <em>ai</em> in past → <em>i/e</em> in past participle. Often called the "rive" class.</p>
+      <table class="verb-table">
+        <thead>
+          <tr>
+            <th>Infinitiv</th>
+            <th>Presens</th>
+            <th>Preteritum</th>
+            <th>Perfektum (partisipp)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>bite</td><td>biter</td><td>bet</td><td>bitt</td></tr>
+          <tr><td>drive</td><td>driver</td><td>drev</td><td>drevet</td></tr>
+          <tr><td>gripe</td><td>griper</td><td>grep</td><td>grepet</td></tr>
+          <tr><td>pipe</td><td>piper</td><td>pep</td><td>pepet</td></tr>
+          <tr><td>ride</td><td>rider</td><td>red</td><td>ridd</td></tr>
+          <tr><td>rive</td><td>river</td><td>rev</td><td>revet</td></tr>
+          <tr><td>skrike</td><td>skriker</td><td>skrek</td><td>skreket</td></tr>
+          <tr><td>skrive</td><td>skriver</td><td>skrev</td><td>skrevet</td></tr>
+          <tr><td>slide</td><td>slider</td><td>sled</td><td>sledd</td></tr>
+          <tr><td>stige</td><td>stiger</td><td>steg</td><td>steget</td></tr>
+          <tr><td>strive</td><td>striver</td><td>strev</td><td>strevet</td></tr>
+          <tr><td>vike</td><td>viker</td><td>vek</td><td>veket</td></tr>
+          <tr><td>vri</td><td>vrir</td><td>vred</td><td>vridd</td></tr>
+          <tr><td>lide</td><td>lider</td><td>led</td><td>lidd</td></tr>
+          <tr><td>nyte</td><td>nyter</td><td>nøt</td><td>nytt</td></tr>
+          <tr><td>tyte</td><td>tyter</td><td>tøt</td><td>tytt</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CLASS II: y/øy → au → o (fly/choose type) -->
+    <div class="verb-section" data-class="2">
+      <h3>Class II — Vowel pattern: y/øy → au → o</h3>
+      <p class="class-desc">Stem vowel <em>y</em> or <em>øy</em> in infinitive → <em>au</em> in past → <em>o</em> in past participle. Often called the "fly/lyve" class.</p>
+      <table class="verb-table">
+        <thead>
+          <tr>
+            <th>Infinitiv</th>
+            <th>Presens</th>
+            <th>Preteritum</th>
+            <th>Perfektum (partisipp)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>fly</td><td>flyr</td><td>fløy</td><td>fløyet</td></tr>
+          <tr><td>ly</td><td>lyr</td><td>løy</td><td>løyet</td></tr>
+          <tr><td>lyve</td><td>lyver</td><td>løy</td><td>løyet</td></tr>
+          <tr><td>nyte</td><td>nyter</td><td>nøt</td><td>nytt</td></tr>
+          <tr><td>nyse</td><td>nyser</td><td>nøs</td><td>nyst</td></tr>
+          <tr><td>bryte</td><td>bryter</td><td>brøt</td><td>brutt</td></tr>
+          <tr><td>flykte</td><td>flykter</td><td>flyktet</td><td>flyktet</td></tr>
+          <tr><td>knyte</td><td>knyter</td><td>knøt</td><td>knyttet</td></tr>
+          <tr><td>krype</td><td>kryper</td><td>krøp</td><td>krøpet</td></tr>
+          <tr><td>tryne</td><td>tryner</td><td>trønte</td><td>trynt</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CLASS III: e → a → o (help/begin/sing type) -->
+    <div class="verb-section" data-class="3">
+      <h3>Class III — Vowel pattern: e → a → o / u</h3>
+      <p class="class-desc">Stem vowel <em>e</em> in infinitive → <em>a</em> in past → <em>o/u</em> in past participle. Includes many common everyday verbs.</p>
+      <table class="verb-table">
+        <thead>
+          <tr>
+            <th>Infinitiv</th>
+            <th>Presens</th>
+            <th>Preteritum</th>
+            <th>Perfektum (partisipp)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>begynne</td><td>begynner</td><td>begynte</td><td>begynt</td></tr>
+          <tr><td>binde</td><td>binder</td><td>bandt</td><td>bundet</td></tr>
+          <tr><td>brenne</td><td>brenner</td><td>brant</td><td>brent</td></tr>
+          <tr><td>drikke</td><td>drikker</td><td>drakk</td><td>drukket</td></tr>
+          <tr><td>finne</td><td>finner</td><td>fant</td><td>funnet</td></tr>
+          <tr><td>gjelde</td><td>gjelder</td><td>gjaldt</td><td>gjeldt</td></tr>
+          <tr><td>hjelpe</td><td>hjelper</td><td>hjalp</td><td>hjulpet</td></tr>
+          <tr><td>klemme</td><td>klemmer</td><td>klammet</td><td>klammet</td></tr>
+          <tr><td>renne</td><td>renner</td><td>rant</td><td>rent</td></tr>
+          <tr><td>ringe</td><td>ringer</td><td>ringte</td><td>ringt</td></tr>
+          <tr><td>selge</td><td>selger</td><td>solgte</td><td>solgt</td></tr>
+          <tr><td>sende</td><td>sender</td><td>sendte</td><td>sendt</td></tr>
+          <tr><td>sette</td><td>setter</td><td>satte</td><td>satt</td></tr>
+          <tr><td>sitte</td><td>sitter</td><td>satt</td><td>sittet</td></tr>
+          <tr><td>spenne</td><td>spenner</td><td>spente</td><td>spent</td></tr>
+          <tr><td>spinne</td><td>spinner</td><td>spant</td><td>spunnet</td></tr>
+          <tr><td>sprenge</td><td>sprenger</td><td>sprengte</td><td>sprengt</td></tr>
+          <tr><td>strekke</td><td>strekker</td><td>strakk</td><td>strukket</td></tr>
+          <tr><td>svinge</td><td>svinger</td><td>svang</td><td>svunget</td></tr>
+          <tr><td>synge</td><td>synger</td><td>sang</td><td>sunget</td></tr>
+          <tr><td>synke</td><td>synker</td><td>sank</td><td>sunket</td></tr>
+          <tr><td>trenge</td><td>trenger</td><td>trengte</td><td>trengt</td></tr>
+          <tr><td>tvinge</td><td>tvinger</td><td>tvang</td><td>tvunget</td></tr>
+          <tr><td>vende</td><td>vender</td><td>vendte</td><td>vendt</td></tr>
+          <tr><td>vinne</td><td>vinner</td><td>vant</td><td>vunnet</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CLASS IV: e/æ → a → e (bear/come/break type) -->
+    <div class="verb-section" data-class="4">
+      <h3>Class IV — Vowel pattern: e/æ → a/o → e/o</h3>
+      <p class="class-desc">Includes many high-frequency verbs — come, give, take, break, ask, speak, eat.</p>
+      <table class="verb-table">
+        <thead>
+          <tr>
+            <th>Infinitiv</th>
+            <th>Presens</th>
+            <th>Preteritum</th>
+            <th>Perfektum (partisipp)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>be</td><td>ber</td><td>ba</td><td>bedt</td></tr>
+          <tr><td>bære</td><td>bærer</td><td>bar</td><td>båret</td></tr>
+          <tr><td>breke</td><td>breker</td><td>brakk</td><td>brukket</td></tr>
+          <tr><td>bryte</td><td>bryter</td><td>brøt</td><td>brutt</td></tr>
+          <tr><td>drepe</td><td>dreper</td><td>drepte</td><td>drept</td></tr>
+          <tr><td>ete</td><td>eter</td><td>åt</td><td>ett</td></tr>
+          <tr><td>fare</td><td>farer</td><td>for</td><td>faret</td></tr>
+          <tr><td>forsvinne</td><td>forsvinner</td><td>forsvant</td><td>forsvunnet</td></tr>
+          <tr><td>gi</td><td>gir</td><td>ga</td><td>gitt</td></tr>
+          <tr><td>gjøre</td><td>gjør</td><td>gjorde</td><td>gjort</td></tr>
+          <tr><td>grave</td><td>graver</td><td>grov</td><td>gravd</td></tr>
+          <tr><td>gå</td><td>går</td><td>gikk</td><td>gått</td></tr>
+          <tr><td>ha</td><td>har</td><td>hadde</td><td>hatt</td></tr>
+          <tr><td>komme</td><td>kommer</td><td>kom</td><td>kommet</td></tr>
+          <tr><td>la</td><td>lar</td><td>lot</td><td>latt</td></tr>
+          <tr><td>le</td><td>ler</td><td>lo</td><td>ledd</td></tr>
+          <tr><td>legge</td><td>legger</td><td>la</td><td>lagt</td></tr>
+          <tr><td>ligge</td><td>ligger</td><td>lå</td><td>ligget</td></tr>
+          <tr><td>løpe</td><td>løper</td><td>løp</td><td>løpt</td></tr>
+          <tr><td>se</td><td>ser</td><td>så</td><td>sett</td></tr>
+          <tr><td>si</td><td>sier</td><td>sa</td><td>sagt</td></tr>
+          <tr><td>skjære</td><td>skjærer</td><td>skar</td><td>skåret</td></tr>
+          <tr><td>skyte</td><td>skyter</td><td>skjøt</td><td>skutt</td></tr>
+          <tr><td>slippe</td><td>slipper</td><td>slapp</td><td>sluppet</td></tr>
+          <tr><td>snyte</td><td>snyter</td><td>snøt</td><td>snytt</td></tr>
+          <tr><td>spørre</td><td>spør</td><td>spurte</td><td>spurt</td></tr>
+          <tr><td>stå</td><td>står</td><td>sto</td><td>stått</td></tr>
+          <tr><td>ta</td><td>tar</td><td>tok</td><td>tatt</td></tr>
+          <tr><td>tre</td><td>trer</td><td>trådte</td><td>trådt</td></tr>
+          <tr><td>vere / være</td><td>er</td><td>var</td><td>vært</td></tr>
+          <tr><td>vite</td><td>vet</td><td>visste</td><td>visst</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CLASS V: a → o → a (fall/hold/call type) -->
+    <div class="verb-section" data-class="5">
+      <h3>Class V — Vowel pattern: a → o/ei → a/å</h3>
+      <p class="class-desc">Stem vowel <em>a</em> in infinitive, changes in past tense. Includes fall, hold, blow, grow, hit.</p>
+      <table class="verb-table">
+        <thead>
+          <tr>
+            <th>Infinitiv</th>
+            <th>Presens</th>
+            <th>Preteritum</th>
+            <th>Perfektum (partisipp)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>bake</td><td>baker</td><td>bakte</td><td>bakt</td></tr>
+          <tr><td>blåse</td><td>blåser</td><td>blåste</td><td>blåst</td></tr>
+          <tr><td>falle</td><td>faller</td><td>falt</td><td>falt</td></tr>
+          <tr><td>flyte</td><td>flyter</td><td>fløt</td><td>flytt</td></tr>
+          <tr><td>hete</td><td>heter</td><td>het</td><td>hett</td></tr>
+          <tr><td>holde</td><td>holder</td><td>holdt</td><td>holdt</td></tr>
+          <tr><td>kalle</td><td>kaller</td><td>kalte</td><td>kalt</td></tr>
+          <tr><td>kjøre</td><td>kjører</td><td>kjørte</td><td>kjørt</td></tr>
+          <tr><td>skaffe</td><td>skaffer</td><td>skaffet</td><td>skaffet</td></tr>
+          <tr><td>skape</td><td>skaper</td><td>skapte</td><td>skapt</td></tr>
+          <tr><td>slå</td><td>slår</td><td>slo</td><td>slått</td></tr>
+          <tr><td>sove</td><td>sover</td><td>sov</td><td>sovet</td></tr>
+          <tr><td>stange</td><td>stanger</td><td>stakk</td><td>stukket</td></tr>
+          <tr><td>stikke</td><td>stikker</td><td>stakk</td><td>stukket</td></tr>
+          <tr><td>stjele</td><td>stjeler</td><td>stjal</td><td>stjålet</td></tr>
+          <tr><td>svare</td><td>svarer</td><td>svarte</td><td>svart</td></tr>
+          <tr><td>vaske</td><td>vasker</td><td>vasket</td><td>vasket</td></tr>
+          <tr><td>vokse</td><td>vokser</td><td>vokste</td><td>vokst</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- IRREGULAR / Mixed class -->
+    <div class="verb-section" data-class="6">
+      <h3>Highly Irregular &amp; Mixed</h3>
+      <p class="class-desc">Verbs that don't fit neatly into the above classes, or have suppletive/unusual forms. Essential to memorize.</p>
+      <table class="verb-table">
+        <thead>
+          <tr>
+            <th>Infinitiv</th>
+            <th>Presens</th>
+            <th>Preteritum</th>
+            <th>Perfektum (partisipp)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>bli</td><td>blir</td><td>ble</td><td>blitt</td></tr>
+          <tr><td>burde</td><td>bør</td><td>burde</td><td>burdet</td></tr>
+          <tr><td>dra</td><td>drar</td><td>dro</td><td>dratt</td></tr>
+          <tr><td>finnes</td><td>finnes</td><td>fantes</td><td>funnes</td></tr>
+          <tr><td>forstå</td><td>forstår</td><td>forstod</td><td>forstått</td></tr>
+          <tr><td>få</td><td>får</td><td>fikk</td><td>fått</td></tr>
+          <tr><td>hete</td><td>heter</td><td>het</td><td>hett</td></tr>
+          <tr><td>skulle</td><td>skal</td><td>skulle</td><td>skullet</td></tr>
+          <tr><td>kunne</td><td>kan</td><td>kunne</td><td>kunnet</td></tr>
+          <tr><td>måtte</td><td>må</td><td>måtte</td><td>måttet</td></tr>
+          <tr><td>ville</td><td>vil</td><td>ville</td><td>villet</td></tr>
+          <tr><td>like</td><td>liker</td><td>likte</td><td>likt</td></tr>
+          <tr><td>slite</td><td>sliter</td><td>slet</td><td>slitt</td></tr>
+          <tr><td>smøre</td><td>smører</td><td>smurte</td><td>smurt</td></tr>
+          <tr><td>snu</td><td>snur</td><td>snudde</td><td>snudd</td></tr>
+          <tr><td>springe</td><td>springer</td><td>sprang</td><td>sprunget</td></tr>
+          <tr><td>stå</td><td>står</td><td>sto</td><td>stått</td></tr>
+          <tr><td>synes</td><td>synes</td><td>syntes</td><td>syntes</td></tr>
+          <tr><td>trekke</td><td>trekker</td><td>trakk</td><td>trukket</td></tr>
+          <tr><td>trykke</td><td>trykker</td><td>trykket</td><td>trykket</td></tr>
+          <tr><td>velge</td><td>velger</td><td>valgte</td><td>valgt</td></tr>
+          <tr><td>vike</td><td>viker</td><td>vek</td><td>veket</td></tr>
+          <tr><td>bære</td><td>bærer</td><td>bar</td><td>båret</td></tr>
+          <tr><td>bli</td><td>blir</td><td>ble</td><td>blitt</td></tr>
+          <tr><td>bringe</td><td>bringer</td><td>brakte</td><td>brakt</td></tr>
+          <tr><td>dø</td><td>dør</td><td>døde</td><td>dødd</td></tr>
+          <tr><td>fryse</td><td>fryser</td><td>frøs</td><td>frosset</td></tr>
+          <tr><td>kjøpe</td><td>kjøper</td><td>kjøpte</td><td>kjøpt</td></tr>
+          <tr><td>kaste</td><td>kaster</td><td>kastet</td><td>kastet</td></tr>
+          <tr><td>lære</td><td>lærer</td><td>lærte</td><td>lært</td></tr>
+          <tr><td>møte</td><td>møter</td><td>møtte</td><td>møtt</td></tr>
+          <tr><td>nå</td><td>når</td><td>nådde</td><td>nådd</td></tr>
+          <tr><td>prøve</td><td>prøver</td><td>prøvde</td><td>prøvd</td></tr>
+          <tr><td>rekke</td><td>rekker</td><td>rakk</td><td>rukket</td></tr>
+          <tr><td>rope</td><td>roper</td><td>ropte</td><td>ropt</td></tr>
+          <tr><td>skjønne</td><td>skjønner</td><td>skjønte</td><td>skjønt</td></tr>
+          <tr><td>smile</td><td>smiler</td><td>smilte</td><td>smilt</td></tr>
+          <tr><td>snakke</td><td>snakker</td><td>snakket</td><td>snakket</td></tr>
+          <tr><td>sove</td><td>sover</td><td>sov</td><td>sovet</td></tr>
+          <tr><td>spille</td><td>spiller</td><td>spilte</td><td>spilt</td></tr>
+          <tr><td>tenke</td><td>tenker</td><td>tenkte</td><td>tenkt</td></tr>
+          <tr><td>tro</td><td>tror</td><td>trodde</td><td>trodd</td></tr>
+          <tr><td>trenge</td><td>trenger</td><td>trengte</td><td>trengt</td></tr>
+          <tr><td>åpne</td><td>åpner</td><td>åpnet</td><td>åpnet</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h3>Practice These Verbs in Context</h3>
+      <p>The Learn Norwegian app has exercises, flashcards and examples for all common irregular verbs — so you build real muscle memory.</p>
+      <div class="store-links">
+        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+          <img src="../../assets/AppleLogo.png" alt="Download on App Store">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+          <img src="../../assets/GoogleLogo.png" alt="Get it on Google Play">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Learn Norwegian. All rights reserved.</p>
+    <p>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms and Conditions</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../tools.html">Tools</a>
+    </p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('verbSearch');
+    const noResults = document.getElementById('noResults');
+    const resultCount = document.getElementById('resultCount');
+
+    function getAllRows() {
+      return document.querySelectorAll('.verb-table tbody tr');
+    }
+
+    function filterVerbs(query) {
+      const q = query.trim().toLowerCase();
+      const sections = document.querySelectorAll('.verb-section');
+      let totalVisible = 0;
+
+      sections.forEach(section => {
+        const rows = section.querySelectorAll('tbody tr');
+        let sectionVisible = 0;
+
+        rows.forEach(row => {
+          const text = row.textContent.toLowerCase();
+          if (!q || text.includes(q)) {
+            row.classList.remove('hidden');
+            sectionVisible++;
+          } else {
+            row.classList.add('hidden');
+          }
+        });
+
+        totalVisible += sectionVisible;
+        // Hide/show section heading when no results in it
+        section.style.display = (sectionVisible === 0 && q) ? 'none' : '';
+      });
+
+      noResults.style.display = (totalVisible === 0 && q) ? 'block' : 'none';
+      if (q) {
+        resultCount.textContent = `${totalVisible} verb${totalVisible !== 1 ? 's' : ''} found`;
+      } else {
+        resultCount.textContent = '';
+      }
+    }
+
+    searchInput.addEventListener('input', () => filterVerbs(searchInput.value));
+
+    function clearSearch() {
+      searchInput.value = '';
+      filterVerbs('');
+      searchInput.focus();
+    }
+  </script>
+</body>
+</html>

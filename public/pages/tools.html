@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norwegian Language Tools – Learn Norwegian</title>
+  <meta name="description" content="Free Norwegian language tools: irregular verb table, Bokmål dictionary, grammar references and more. Built for learners of Norwegian.">
+  <meta name="keywords" content="Norwegian tools, Norwegian irregular verbs, Norwegian dictionary, Bokmål dictionary, learn Norwegian, Norwegian grammar">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" type="image/png" href="../assets/favicon.ico">
+  <style>
+    .tools-hero {
+      background: linear-gradient(90deg, #00308f, #007FFF);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .tools-hero h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    .tools-hero p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .tools-container {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+    .tools-section {
+      margin-bottom: 3rem;
+    }
+    .tools-section h3 {
+      font-size: 1.3rem;
+      color: #00308f;
+      border-left: 4px solid #007FFF;
+      padding-left: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .tools-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .tool-card {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      width: calc(33% - 1rem);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      text-decoration: none;
+    }
+    .tool-card .tool-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .tool-card .tag {
+      display: inline-block;
+      background: #007FFF;
+      color: white;
+      font-size: 0.72rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      margin-bottom: 0.75rem;
+      font-weight: bold;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .tool-card h4 {
+      font-size: 1.1rem;
+      color: #00308f;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.4;
+    }
+    .tool-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 0 0 0.75rem 0;
+      line-height: 1.5;
+    }
+    .tool-card .open-tool {
+      font-size: 0.85rem;
+      color: #007FFF;
+      font-weight: bold;
+    }
+    .tool-card.coming-soon {
+      opacity: 0.55;
+      pointer-events: none;
+      cursor: default;
+    }
+    .cta-banner {
+      background: linear-gradient(90deg, #00308f, #007FFF);
+      color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta-banner h3 { color: white; margin-bottom: 0.5rem; }
+    .cta-banner p { opacity: 0.9; margin-bottom: 1.2rem; }
+    .cta-banner .store-links { display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .cta-banner .store-links a img { height: 40px; border-radius: 8px; }
+    @media (max-width: 768px) {
+      .tool-card { width: 100%; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .tool-card { width: calc(50% - 0.75rem); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Learn Norwegian</h1>
+      <div class="links">
+        <a href="../index.html#download">Download</a>
+        <a href="../index.html#features">Features</a>
+        <a href="faq.html">FAQ</a>
+        <a href="blog.html">Blog</a>
+        <a href="tools.html" style="font-weight:bold;">Tools</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="tools-hero">
+    <h2>Norwegian Language Tools</h2>
+    <p>Free reference tools to support your Norwegian learning journey. Look up words, study irregular verbs, and more.</p>
+  </div>
+
+  <div class="tools-container">
+
+    <div class="tools-section">
+      <h3>📖 Grammar &amp; Vocabulary</h3>
+      <div class="tools-grid">
+
+        <a href="tools/norwegian-dictionary.html" class="tool-card">
+          <span class="tool-icon">🔍</span>
+          <span class="tag">Dictionary</span>
+          <h4>Norwegian Bokmål Dictionary</h4>
+          <p>Search the full Norwegian Bokmål dictionary powered by Ordbøkene (UiB). See definitions, inflections, and examples — all in Norwegian.</p>
+          <span class="open-tool">Open dictionary →</span>
+        </a>
+
+        <a href="tools/norwegian-irregular-verbs.html" class="tool-card">
+          <span class="tool-icon">📋</span>
+          <span class="tag">Grammar</span>
+          <h4>Norwegian Irregular Verbs Table</h4>
+          <p>A searchable table of 120+ common Norwegian irregular (strong) verbs with infinitive, present, past, and past participle forms. Bokmål.</p>
+          <span class="open-tool">Open verb table →</span>
+        </a>
+
+        <div class="tool-card coming-soon">
+          <span class="tool-icon">🔤</span>
+          <span class="tag">Vocabulary</span>
+          <h4>Norwegian Number System</h4>
+          <p>Interactive guide to Norwegian numbers — cardinal, ordinal, and how to read years, prices, and phone numbers.</p>
+          <span class="open-tool">Coming soon</span>
+        </div>
+
+        <div class="tool-card coming-soon">
+          <span class="tool-icon">🕐</span>
+          <span class="tag">Grammar</span>
+          <h4>Norwegian Verb Conjugator</h4>
+          <p>Enter any Norwegian verb and see its full conjugation across all tenses and forms — regular and irregular.</p>
+          <span class="open-tool">Coming soon</span>
+        </div>
+
+        <div class="tool-card coming-soon">
+          <span class="tool-icon">📝</span>
+          <span class="tag">Grammar</span>
+          <h4>Norwegian Noun Gender Guide</h4>
+          <p>Understand masculine, feminine, and neuter nouns in Bokmål. Tips for guessing gender and the most common exceptions.</p>
+          <span class="open-tool">Coming soon</span>
+        </div>
+
+        <div class="tool-card coming-soon">
+          <span class="tool-icon">🗣️</span>
+          <span class="tag">Pronunciation</span>
+          <h4>Norwegian Pronunciation Guide</h4>
+          <p>Audio-based guide to Norwegian sounds, including the tricky ø, æ, å, and the infamous pitch accent.</p>
+          <span class="open-tool">Coming soon</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <div class="cta-banner">
+      <h3>Learn Norwegian on the Go</h3>
+      <p>Flashcards, grammar exercises, reading texts, dictionary and more — all in one app, built for real learners.</p>
+      <div class="store-links">
+        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+          <img src="../assets/AppleLogo.png" alt="Download on App Store">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+          <img src="../assets/GoogleLogo.png" alt="Get it on Google Play">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Learn Norwegian. All rights reserved.</p>
+    <p>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms and Conditions</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="tools.html">Tools</a>
+    </p>
+  </footer>
+</body>
+</html>

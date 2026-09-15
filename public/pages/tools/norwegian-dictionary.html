@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norwegian Bokmål Dictionary – Ordbøkene | Learn Norwegian</title>
+  <meta name="description" content="Free Norwegian Bokmål dictionary powered by Ordbøkene (University of Bergen). Search any Norwegian word and see its definitions, inflections, and examples.">
+  <meta name="keywords" content="Norwegian dictionary, Bokmål dictionary, norsk ordbok, Ordbøkene, Norwegian word definitions, learn Norwegian, norsk ordbok online">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" type="image/png" href="../../assets/favicon.ico">
+  <style>
+    /* ── Layout ── */
+    .dict-hero {
+      background: linear-gradient(90deg, #00308f, #007FFF);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .dict-hero h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    .dict-hero p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .dict-container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 6rem;
+    }
+
+    /* ── Search box ── */
+    .search-wrap {
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+    #dictSearch {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0.85rem 3rem 0.85rem 1.2rem;
+      font-size: 1.1rem;
+      border: 2px solid #007FFF;
+      border-radius: 8px;
+      outline: none;
+      font-family: Arial, sans-serif;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    #dictSearch:focus {
+      border-color: #00308f;
+      box-shadow: 0 0 0 3px rgba(0,127,255,0.18);
+    }
+    .search-clear {
+      position: absolute;
+      right: 0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      color: #999;
+      cursor: pointer;
+      display: none;
+      line-height: 1;
+    }
+    .search-clear:hover { color: #333; }
+    .search-hint {
+      font-size: 0.82rem;
+      color: #888;
+      margin-bottom: 1.2rem;
+      padding-left: 0.2rem;
+    }
+
+    /* ── Suggestions dropdown ── */
+    #suggestions {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      max-height: 260px;
+      overflow-y: auto;
+      display: none;
+      position: relative;
+      z-index: 10;
+    }
+    #suggestions li {
+      padding: 0.6rem 1.2rem;
+      cursor: pointer;
+      font-size: 0.97rem;
+      border-bottom: 1px solid #f0f0f0;
+      transition: background 0.12s;
+    }
+    #suggestions li:last-child { border-bottom: none; }
+    #suggestions li:hover, #suggestions li.active {
+      background: #eef4ff;
+      color: #00308f;
+    }
+    #suggestions li.no-suggestions {
+      color: #999;
+      cursor: default;
+      font-style: italic;
+    }
+    #suggestions li.no-suggestions:hover { background: transparent; color: #999; }
+
+    /* ── Spinner ── */
+    .spinner {
+      display: none;
+      text-align: center;
+      padding: 3rem 0;
+      color: #007FFF;
+      font-size: 1rem;
+    }
+    .spinner::before {
+      content: '';
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border: 4px solid #e0e8ff;
+      border-top-color: #007FFF;
+      border-radius: 50%;
+      animation: spin 0.75s linear infinite;
+      margin-right: 0.75rem;
+      vertical-align: middle;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Error ── */
+    .error-box {
+      background: #fff0f0;
+      border-left: 4px solid #cc0000;
+      padding: 1rem 1.2rem;
+      border-radius: 0 6px 6px 0;
+      color: #cc0000;
+      display: none;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Article card ── */
+    .article-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.8rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    /* Headword */
+    .headword-line {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+    .headword {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: #00308f;
+      line-height: 1.1;
+    }
+    .headword sup {
+      font-size: 1rem;
+      color: #007FFF;
+    }
+    .word-class {
+      display: inline-block;
+      background: #eef4ff;
+      color: #00308f;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 20px;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      border: 1px solid #c0d8ff;
+    }
+
+    /* Inflection table */
+    .inflection-section {
+      margin: 1rem 0;
+    }
+    .inflection-section summary {
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: #007FFF;
+      font-weight: bold;
+      user-select: none;
+      margin-bottom: 0.5rem;
+    }
+    .inflection-section summary:hover { color: #00308f; }
+    .inflection-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+    .inflection-table th {
+      background: #f0f4ff;
+      color: #00308f;
+      padding: 0.4rem 0.7rem;
+      text-align: left;
+      font-weight: bold;
+      border-bottom: 2px solid #c0d8ff;
+    }
+    .inflection-table td {
+      padding: 0.35rem 0.7rem;
+      border-bottom: 1px solid #eee;
+      color: #333;
+    }
+    .inflection-table tr:last-child td { border-bottom: none; }
+    .inflection-table tr:hover td { background: #f7faff; }
+
+    /* Definitions */
+    .definitions-section { margin-top: 1.2rem; }
+    .definitions-section h4 {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 0.75rem;
+      font-weight: bold;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.4rem;
+    }
+    .def-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .def-item {
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      border-left: 3px solid #007FFF;
+    }
+    .def-number {
+      font-weight: bold;
+      color: #007FFF;
+      margin-right: 0.3rem;
+    }
+    .def-text {
+      color: #222;
+      line-height: 1.5;
+    }
+    .def-example {
+      font-style: italic;
+      color: #555;
+      margin-top: 0.3rem;
+      font-size: 0.92rem;
+    }
+    .def-example::before { content: '— '; color: #007FFF; }
+    .sub-def {
+      margin-top: 0.6rem;
+      padding-left: 1rem;
+      border-left: 2px solid #c0d8ff;
+    }
+    .sub-def .def-item { border-left-color: #c0d8ff; }
+    .sub-def-block { margin-left: 1rem; padding-left: 0.8rem; border-left: 2px solid #c0d8ff; margin-top: 0.4rem; }
+    .compound-list { font-size: 0.88rem; color: #555; margin-top: 0.3rem; font-style: italic; }
+
+    /* Welcome / empty state */
+    .welcome-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: #888;
+    }
+    .welcome-state .big-icon { font-size: 4rem; margin-bottom: 1rem; }
+    .welcome-state h3 { color: #555; font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .welcome-state p { font-size: 0.9rem; max-width: 400px; margin: 0 auto; line-height: 1.6; }
+    .welcome-state .sample-words {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .sample-words button {
+      background: #eef4ff;
+      border: 1px solid #c0d8ff;
+      color: #00308f;
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-family: Arial, sans-serif;
+      transition: background 0.15s;
+    }
+    .sample-words button:hover { background: #007FFF; color: white; border-color: #007FFF; }
+
+    /* Attribution */
+    .attribution {
+      font-size: 0.78rem;
+      color: #aaa;
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .attribution a { color: #007FFF; }
+
+    /* CTA banner */
+    .cta-banner {
+      background: linear-gradient(90deg, #00308f, #007FFF);
+      color: white;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .cta-banner h3 { color: white; margin-bottom: 0.5rem; }
+    .cta-banner p { opacity: 0.9; margin-bottom: 1.2rem; }
+    .cta-banner .store-links { display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .cta-banner .store-links a img { height: 40px; border-radius: 8px; }
+
+    @media (max-width: 600px) {
+      .headword { font-size: 1.7rem; }
+      .article-card { padding: 1.2rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Learn Norwegian</h1>
+      <div class="links">
+        <a href="../../index.html#download">Download</a>
+        <a href="../../index.html#features">Features</a>
+        <a href="../faq.html">FAQ</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../tools.html" style="font-weight:bold;">Tools</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="dict-hero">
+    <h2>Norwegian Bokmål Dictionary</h2>
+    <p>Search any Norwegian word and see its full definition, inflections, and examples. Powered by the official Ordbøkene database from the University of Bergen.</p>
+  </div>
+
+  <div class="dict-container">
+
+    <div class="search-wrap">
+      <input type="text" id="dictSearch" placeholder="Search in Norwegian — e.g. løpe, hus, glad…" autocomplete="off" spellcheck="false" aria-label="Search Norwegian dictionary">
+      <button class="search-clear" id="searchClear" title="Clear" aria-label="Clear search">✕</button>
+    </div>
+    <p class="search-hint">Type to see suggestions, then click a word to load its full entry. Bokmål (BM) only.</p>
+
+    <ul id="suggestions" role="listbox" aria-label="Suggestions"></ul>
+
+    <div class="spinner" id="spinner">Loading…</div>
+    <div class="error-box" id="errorBox"></div>
+
+    <div id="results">
+      <div class="welcome-state" id="welcomeState">
+        <div class="big-icon">📖</div>
+        <h3>Norwegian Bokmål Dictionary</h3>
+        <p>Start typing above to search for any Norwegian word. Try some examples:</p>
+        <div class="sample-words">
+          <button onclick="searchWord('løpe')">løpe</button>
+          <button onclick="searchWord('hus')">hus</button>
+          <button onclick="searchWord('glad')">glad</button>
+          <button onclick="searchWord('snakke')">snakke</button>
+          <button onclick="searchWord('tid')">tid</button>
+          <button onclick="searchWord('arbeide')">arbeide</button>
+          <button onclick="searchWord('vanskelig')">vanskelig</button>
+          <button onclick="searchWord('lese')">lese</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution" id="attribution" style="display:none;">
+      Data from <a href="https://ordbokene.no" target="_blank" rel="noopener">Ordbøkene.no</a> — University of Bergen / Språkrådet. For personal and educational use.
+    </div>
+
+    <div class="cta-banner">
+      <h3>🇳🇴 Want to actually remember these words?</h3>
+      <p>The <strong>Learn Norwegian</strong> app turns words into flashcards, drills grammar, and builds real fluency — available in Polish, German, Ukrainian, Lithuanian, Spanish, Arabic and English.</p>
+      <p style="font-size:0.9rem;opacity:0.85;margin-bottom:1.2rem;">👇 Tap your store below to download for free:</p>
+      <div class="store-links">
+        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone" title="Download on the App Store">
+          <img src="../../assets/AppleLogo.png" alt="Download on the App Store" style="height:50px;border-radius:10px;">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp" title="Get it on Google Play">
+          <img src="../../assets/GoogleLogo.png" alt="Get it on Google Play" style="height:50px;border-radius:10px;">
+        </a>
+      </div>
+      <p style="font-size:0.78rem;opacity:0.7;margin-top:1rem;">Free to download · iOS &amp; Android</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Learn Norwegian. All rights reserved.</p>
+    <p>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms and Conditions</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../tools.html">Tools</a>
+    </p>
+  </footer>
+
+  <script>
+    // ── Constants ──────────────────────────────────────────────────────────────
+    const API_BASE = 'https://ord.uib.no/api';
+    const DICT = 'bm';
+    const MAX_ARTICLES = 4;
+
+    // ── DOM refs ───────────────────────────────────────────────────────────────
+    const searchInput  = document.getElementById('dictSearch');
+    const clearBtn     = document.getElementById('searchClear');
+    const suggestList  = document.getElementById('suggestions');
+    const spinner      = document.getElementById('spinner');
+    const errorBox     = document.getElementById('errorBox');
+    const resultsDiv   = document.getElementById('results');
+    const welcomeState = document.getElementById('welcomeState');
+    const attribution  = document.getElementById('attribution');
+
+    // ── State ──────────────────────────────────────────────────────────────────
+    let debounceTimer = null;
+    let activeSuggIndex = -1;
+    let currentSuggestions = [];
+
+    // ── API ────────────────────────────────────────────────────────────────────
+    async function fetchSuggestions(query, maxResults = 10) {
+      const url = `${API_BASE}/suggest?q=${encodeURIComponent(query)}&n=${maxResults}&dict=${DICT}`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`Suggestions API error ${res.status}`);
+      const json = await res.json();
+      const cats = ['exact', 'freetext', 'inflect', 'similar'];
+      const set = new Set();
+      cats.forEach(cat => {
+        (json.a?.[cat] || []).forEach(item => {
+          const lemma = Array.isArray(item) ? item[0] : item;
+          if (lemma && !set.has(lemma)) set.add(lemma);
+        });
+      });
+      return Array.from(set);
+    }
+
+    async function fetchArticleList(lemma) {
+      const url = `${API_BASE}/articles?w=${encodeURIComponent(lemma)}&dict=${DICT}&scope=e`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`Articles API error ${res.status}`);
+      const json = await res.json();
+      return json.articles?.[DICT] || [];
+    }
+
+    async function fetchArticle(articleId) {
+      const url = `https://ord.uib.no/${DICT}/article/${articleId}.json`;
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`Article API error ${res.status}`);
+      return res.json();
+    }
+
+    // ── Content rendering helpers ──────────────────────────────────────────────
+
+    // Ordbøkene content fields are arrays of {type_, text} objects OR plain strings
+    function renderContent(content) {
+      if (!content) return '';
+      if (typeof content === 'string') return escHtml(content);
+      if (Array.isArray(content)) {
+        return content.map(seg => {
+          if (typeof seg === 'string') return escHtml(seg);
+          // segments have .text field
+          return escHtml(seg.text || seg.lemma || '');
+        }).join('');
+      }
+      return '';
+    }
+
+    // Render inline items referenced by $ placeholders in template strings
+    function renderItemInline(item) {
+      if (!item) return '';
+      switch (item.type_) {
+        case 'usage': return escHtml(item.text || '');
+        case 'article_ref': return escHtml(item.lemmas?.[0]?.lemma || '');
+        case 'entity':
+        case 'language':
+        case 'grammar':
+        case 'relation': return escHtml(item.id || '');
+        default: return escHtml(item.text || '');
+      }
+    }
+
+    // Template strings use $ as placeholders for items array
+    function renderTemplate(content, items = []) {
+      if (!content) return '';
+      const parts = String(content).split('$');
+      let out = '';
+      for (let i = 0; i < parts.length; i++) {
+        out += escHtml(parts[i]);
+        if (items && items[i]) out += renderItemInline(items[i]);
+      }
+      return out.trim();
+    }
+
+    // Render a single element — Ordbøkene uses type_ (with underscore)
+    function renderElement(el, depth = 0) {
+      if (!el) return '';
+      const type = el.type_ || el.type || '';
+
+      switch (type) {
+        case 'explanation': {
+          // Main definition text — content is a template string, items fill $ slots
+          const text = renderTemplate(el.content, el.items);
+          return text ? `<span class="def-text">${text}</span>` : '';
+        }
+        case 'example': {
+          const quote = el.quote ? renderTemplate(el.quote.content, el.quote.items) : '';
+          const expl  = el.explanation ? renderTemplate(el.explanation.content, el.explanation.items) : '';
+          if (!quote && !expl) return '';
+          return `<div class="def-example">${quote}${expl ? ' — ' + expl : ''}</div>`;
+        }
+        case 'definition': {
+          // Nested definition block
+          let html = '<div class="sub-def-block">';
+          (el.elements || []).forEach(subEl => { html += renderElement(subEl, depth + 1); });
+          html += '</div>';
+          return html;
+        }
+        case 'compound_list': {
+          const intro = renderTemplate(el.intro?.content, el.intro?.items);
+          const words = (el.elements || []).map(c => escHtml(c?.lemmas?.[0]?.lemma || '')).filter(Boolean).join(', ');
+          return `<div class="compound-list">${intro ? intro + ' ' : ''}${words}</div>`;
+        }
+        case 'sub_article': {
+          if (el.article) return renderDefinitions(el.article.body?.definitions || [], depth + 1);
+          return '';
+        }
+        // Legacy / fallback — definition_text used in older API format
+        case 'definition_text': {
+          const text = renderContent(el.content);
+          return text ? `<span class="def-text">${text}</span>` : '';
+        }
+        default:
+          // Try to render anything with content
+          if (el.content) {
+            const text = typeof el.content === 'string'
+              ? renderTemplate(el.content, el.items)
+              : renderContent(el.content);
+            return text ? `<span class="def-text">${text}</span>` : '';
+          }
+          return '';
+      }
+    }
+
+    function renderDefinitions(definitions, depth = 0) {
+      if (!definitions || !definitions.length) return '';
+      let html = `<ol class="def-list${depth > 0 ? ' sub-def' : ''}">`;
+      definitions.forEach((def, idx) => {
+        if (!def) return;
+        const type = def.type_ || def.type || '';
+        if (type !== 'definition' && type !== '') return; // skip non-definition blocks
+        html += `<li class="def-item">`;
+        // Elements inside this definition
+        const elements = def.elements || [];
+        elements.forEach(el => { html += renderElement(el, depth); });
+        html += `</li>`;
+      });
+      html += '</ol>';
+      return html;
+    }
+
+    // ── Inflection table ───────────────────────────────────────────────────────
+    // Ordbøkene stores inflections in lemmas[0].paradigm_info[].inflection[]
+    // Each inflection entry: { tags: [...], word_form: "..." }
+    function buildInflectionTable(article) {
+      const paradigm_info = article.lemmas?.[0]?.paradigm_info || [];
+      if (!paradigm_info.length) return '';
+
+      // Collect all unique (tags, word_form) pairs across all paradigms
+      const allowedTags = new Set([
+        'Inf','Pres','Past','<PerfPart>','Imp','Inf, Pass',
+        'Sing, Ind','Sing, Def','Plur, Ind','Plur, Def',
+        'Pos, Masc/Fem, Ind, Sing','Pos, Neuter, Ind, Sing',
+        'Pos, Plur','Pos, Def, Sing','Cmp','Sup, Ind','Sup, Def',
+        'Adj, <PresPart>'
+      ]);
+
+      // Build rows: for each paradigm, get inflection rows
+      // Use first paradigm that has inflection data
+      let rows = [];
+      for (const p of paradigm_info) {
+        const inf = p.inflection || [];
+        if (!inf.length) continue;
+        inf.forEach(entry => {
+          const tagStr = (entry.tags || []).join(', ');
+          const wf = entry.word_form || '';
+          if (wf && (allowedTags.has(tagStr) || allowedTags.size === 0)) {
+            rows.push({ tags: tagStr, word_form: wf });
+          }
+        });
+        if (rows.length) break; // use first paradigm with data
+      }
+
+      // Fallback: if nothing matched allowed list, show all rows
+      if (!rows.length) {
+        for (const p of paradigm_info) {
+          (p.inflection || []).forEach(entry => {
+            const wf = entry.word_form || '';
+            if (wf) rows.push({ tags: (entry.tags || []).join(', '), word_form: wf });
+          });
+          if (rows.length) break;
+        }
+      }
+
+      if (!rows.length) return '';
+
+      let table = `<table class="inflection-table"><thead><tr><th>Form</th><th>Word</th></tr></thead><tbody>`;
+      rows.forEach(r => {
+        table += `<tr><td>${escHtml(r.tags)}</td><td><strong>${escHtml(r.word_form)}</strong></td></tr>`;
+      });
+      table += `</tbody></table>`;
+      return table;
+    }
+
+    function escHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    // ── Article renderer ───────────────────────────────────────────────────────
+    function renderArticle(article) {
+      const lemmaObj = article.lemmas?.[0] || {};
+      const headword = lemmaObj.lemma || '?';
+      const hgno     = lemmaObj.hgno || 0;
+
+      // Word class from paradigm_info tags
+      let wordClass = '';
+      const paradigm = lemmaObj.paradigm_info?.[0];
+      if (paradigm && paradigm.tags && paradigm.tags.length) {
+        wordClass = paradigm.tags.join(', ');
+      }
+
+      // Inflection table
+      const inflectionHtml = buildInflectionTable(article);
+
+      // Definitions
+      const definitions = article.body?.definitions || [];
+      const defsHtml = renderDefinitions(definitions);
+
+      let html = `<div class="article-card">`;
+
+      // Headword + class badge
+      html += `<div class="headword-line">`;
+      html += `<span class="headword">${escHtml(headword)}${hgno > 0 ? `<sup>${hgno}</sup>` : ''}</span>`;
+      if (wordClass) html += `<span class="word-class">${escHtml(wordClass)}</span>`;
+      html += `</div>`;
+
+      // Inflection (collapsible)
+      if (inflectionHtml) {
+        html += `<details class="inflection-section">
+          <summary>▶ Show inflections</summary>
+          ${inflectionHtml}
+        </details>`;
+      }
+
+      // Definitions
+      if (defsHtml) {
+        html += `<div class="definitions-section">
+          <h4>Definitions</h4>
+          ${defsHtml}
+        </div>`;
+      } else {
+        html += `<p style="color:#888;font-style:italic;margin-top:1rem;">No definitions found for this entry.</p>`;
+      }
+
+      html += `</div>`;
+      return html;
+    }
+
+    // ── Search flow ────────────────────────────────────────────────────────────
+    async function searchWord(lemma) {
+      hideSuggestions();
+      searchInput.value = lemma;
+      clearBtn.style.display = 'inline';
+
+      showSpinner();
+      hideError();
+      resultsDiv.innerHTML = '';
+
+      try {
+        const articleIds = await fetchArticleList(lemma);
+
+        if (!articleIds.length) {
+          resultsDiv.innerHTML = `<div class="welcome-state">
+            <div class="big-icon">🔎</div>
+            <h3>No entries found</h3>
+            <p>No dictionary articles were found for "<strong>${escHtml(lemma)}</strong>". Try a different spelling or form.</p>
+          </div>`;
+          attribution.style.display = 'none';
+          hideSpinner();
+          return;
+        }
+
+        const ids = articleIds.slice(0, MAX_ARTICLES);
+        const articles = await Promise.all(ids.map(id => fetchArticle(id)));
+
+        let html = '';
+        articles.forEach(article => { html += renderArticle(article); });
+        resultsDiv.innerHTML = html;
+        attribution.style.display = 'block';
+
+      } catch (err) {
+        showError('Could not load dictionary data. Please check your internet connection and try again. Error: ' + err.message);
+      }
+
+      hideSpinner();
+    }
+
+    // ── Suggestion handling ────────────────────────────────────────────────────
+    searchInput.addEventListener('input', () => {
+      const val = searchInput.value.trim();
+      clearBtn.style.display = val ? 'inline' : 'none';
+
+      clearTimeout(debounceTimer);
+      activeSuggIndex = -1;
+
+      if (!val) {
+        hideSuggestions();
+        resultsDiv.innerHTML = welcomeState.outerHTML;
+        attribution.style.display = 'none';
+        return;
+      }
+
+      debounceTimer = setTimeout(() => loadSuggestions(val), 300);
+    });
+
+    async function loadSuggestions(query) {
+      try {
+        const suggestions = await fetchSuggestions(query, 10);
+        currentSuggestions = suggestions;
+        renderSuggestions(suggestions);
+      } catch {
+        hideSuggestions();
+      }
+    }
+
+    function renderSuggestions(suggestions) {
+      suggestList.innerHTML = '';
+      activeSuggIndex = -1;
+
+      if (!suggestions.length) {
+        suggestList.innerHTML = '<li class="no-suggestions">No suggestions found</li>';
+        suggestList.style.display = 'block';
+        return;
+      }
+
+      suggestions.forEach((word, i) => {
+        const li = document.createElement('li');
+        li.textContent = word;
+        li.setAttribute('role', 'option');
+        li.addEventListener('click', () => { searchWord(word); });
+        suggestList.appendChild(li);
+      });
+      suggestList.style.display = 'block';
+    }
+
+    function hideSuggestions() {
+      suggestList.style.display = 'none';
+      suggestList.innerHTML = '';
+      activeSuggIndex = -1;
+    }
+
+    // Keyboard navigation
+    searchInput.addEventListener('keydown', e => {
+      const items = suggestList.querySelectorAll('li:not(.no-suggestions)');
+      if (!items.length) return;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        activeSuggIndex = Math.min(activeSuggIndex + 1, items.length - 1);
+        updateActiveItem(items);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        activeSuggIndex = Math.max(activeSuggIndex - 1, -1);
+        updateActiveItem(items);
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        if (activeSuggIndex >= 0 && items[activeSuggIndex]) {
+          searchWord(items[activeSuggIndex].textContent);
+        } else if (searchInput.value.trim()) {
+          searchWord(searchInput.value.trim());
+        }
+      } else if (e.key === 'Escape') {
+        hideSuggestions();
+        searchInput.blur();
+      }
+    });
+
+    function updateActiveItem(items) {
+      items.forEach((li, i) => {
+        li.classList.toggle('active', i === activeSuggIndex);
+      });
+    }
+
+    // Click outside to close suggestions
+    document.addEventListener('click', e => {
+      if (!e.target.closest('#dictSearch') && !e.target.closest('#suggestions')) {
+        hideSuggestions();
+      }
+    });
+
+    // Clear button
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearBtn.style.display = 'none';
+      hideSuggestions();
+      resultsDiv.innerHTML = welcomeState.outerHTML;
+      attribution.style.display = 'none';
+      searchInput.focus();
+    });
+
+    // ── UI helpers ─────────────────────────────────────────────────────────────
+    function showSpinner() { spinner.style.display = 'block'; }
+    function hideSpinner() { spinner.style.display = 'none'; }
+    function showError(msg) { errorBox.textContent = msg; errorBox.style.display = 'block'; }
+    function hideError() { errorBox.style.display = 'none'; }
+  </script>
+</body>
+</html>
