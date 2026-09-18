@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Norwegian Language Tools – Learn Norwegian</title>
-  <meta name="description" content="Free Norwegian language tools: irregular verb table, Bokmål dictionary, grammar references and more. Built for learners of Norwegian.">
+  <meta name="description" content="Free Norwegian language tools: Bokmål dictionary, verb conjugator, irregular verb table and an interactive guide to numbers, dates and prices.">
   <meta name="keywords" content="Norwegian tools, Norwegian irregular verbs, Norwegian dictionary, Bokmål dictionary, learn Norwegian, Norwegian grammar">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../app-promo.css">
   <link rel="icon" type="image/png" href="../assets/favicon.ico">
   <style>
     .tools-hero {
@@ -101,18 +102,6 @@
       pointer-events: none;
       cursor: default;
     }
-    .cta-banner {
-      background: linear-gradient(90deg, #00308f, #007FFF);
-      color: white;
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      margin: 3rem 0;
-    }
-    .cta-banner h3 { color: white; margin-bottom: 0.5rem; }
-    .cta-banner p { opacity: 0.9; margin-bottom: 1.2rem; }
-    .cta-banner .store-links { display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; }
-    .cta-banner .store-links a img { height: 40px; border-radius: 8px; }
     @media (max-width: 768px) {
       .tool-card { width: 100%; }
     }
@@ -120,22 +109,39 @@
       .tool-card { width: calc(50% - 0.75rem); }
     }
   </style>
+  <link rel="stylesheet" href="../navigation.css?v=1">
+  <script src="../navigation.js?v=1" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Learn Norwegian</h1>
-      <div class="links">
-        <a href="../index.html#download">Download</a>
-        <a href="../index.html#features">Features</a>
-        <a href="faq.html">FAQ</a>
-        <a href="blog.html">Blog</a>
-        <a href="tools.html" style="font-weight:bold;">Tools</a>
+  <header class="site-header">
+    <a class="site-skip-link" href="#site-content">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav-brand" href="../index.html" aria-label="Learn Norwegian — Home">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Open navigation" data-open-label="Open navigation" data-close-label="Close navigation" hidden>
+        <span>Menu</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../pages/tools.html" aria-current="page">Tools</a></li>
+          <li><a href="../pages/blog.html">Blog</a></li>
+          <li><a href="../pages/faq.html">FAQ</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+        </ul>
+        <a class="site-nav-cta" href="../index.html#download">Get the app <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="../pages/privacy.html">Privacy</a>
+          <a href="../pages/terms.html">Terms</a>
+        </div>
       </div>
     </nav>
   </header>
 
-  <div class="tools-hero">
+  <div class="tools-hero" id="site-content" tabindex="-1">
     <h2>Norwegian Language Tools</h2>
     <p>Free reference tools to support your Norwegian learning journey. Look up words, study irregular verbs, and more.</p>
   </div>
@@ -162,21 +168,21 @@
           <span class="open-tool">Open verb table →</span>
         </a>
 
-        <div class="tool-card coming-soon">
+        <a href="tools/norwegian-number-system.html" class="tool-card">
           <span class="tool-icon">🔤</span>
           <span class="tag">Vocabulary</span>
           <h4>Norwegian Number System</h4>
           <p>Interactive guide to Norwegian numbers — cardinal, ordinal, and how to read years, prices, and phone numbers.</p>
-          <span class="open-tool">Coming soon</span>
-        </div>
+          <span class="open-tool">Explore Norwegian numbers →</span>
+        </a>
 
-        <div class="tool-card coming-soon">
+        <a href="tools/norwegian-verb-conjugator.html" class="tool-card">
           <span class="tool-icon">🕐</span>
           <span class="tag">Grammar</span>
           <h4>Norwegian Verb Conjugator</h4>
-          <p>Enter any Norwegian verb and see its full conjugation across all tenses and forms — regular and irregular.</p>
-          <span class="open-tool">Coming soon</span>
-        </div>
+          <p>Look up regular and irregular Bokmål verbs. See present, past, participles and more, with forms from the official Norwegian dictionary.</p>
+          <span class="open-tool">Find verb forms →</span>
+        </a>
 
         <div class="tool-card coming-soon">
           <span class="tool-icon">📝</span>
@@ -197,19 +203,43 @@
       </div>
     </div>
 
-    <!-- CTA Banner -->
-    <div class="cta-banner">
-      <h3>Learn Norwegian on the Go</h3>
-      <p>Flashcards, grammar exercises, reading texts, dictionary and more — all in one app, built for real learners.</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
-          <img src="../assets/AppleLogo.png" alt="Download on App Store">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
-          <img src="../assets/GoogleLogo.png" alt="Get it on Google Play">
-        </a>
+    <aside class="app-promo app-promo--dark" aria-labelledby="promo-tools-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">7 languages</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-tools-title">From looking it up<br><em>to speaking it.</em></h3>
+        <p class="app-promo__description">Learn Norwegian with our mobile app. Turn dictionary finds into flashcards, practise speaking and build confidence with grammar exercises and reading.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Download on the</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Get it on</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Free to download · iOS &amp; Android</p>
       </div>
-    </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+      <div class="app-promo__languages">
+        <p class="app-promo__languages-label">The whole app, in your language</p>
+        <ul class="app-promo__language-list" aria-label="Available app languages" role="list">
+          <li><img src="../assets/united-kingdom.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="en">English</span></li>
+          <li><img src="../assets/german.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="de">Deutsch</span></li>
+          <li><img src="../assets/spain.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="es">Español</span></li>
+          <li><img src="../assets/poland.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="pl">Polski</span></li>
+          <li><img src="../assets/lithuania.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="lt">Lietuvių</span></li>
+          <li><img src="../assets/ukraine.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="uk">Українська</span></li>
+          <li><img src="../assets/arabic.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="ar" dir="rtl">العربية</span></li>
+        </ul>
+      </div>
+    </aside>
 
   </div>
 

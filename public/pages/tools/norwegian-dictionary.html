@@ -7,6 +7,7 @@
   <meta name="description" content="Free Norwegian Bokmål dictionary powered by Ordbøkene (University of Bergen). Search any Norwegian word and see its definitions, inflections, and examples.">
   <meta name="keywords" content="Norwegian dictionary, Bokmål dictionary, norsk ordbok, Ordbøkene, Norwegian word definitions, learn Norwegian, norsk ordbok online">
   <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../app-promo.css">
   <link rel="icon" type="image/png" href="../../assets/favicon.ico">
   <style>
     /* ── Layout ── */
@@ -299,41 +300,45 @@
     }
     .attribution a { color: #007FFF; }
 
-    /* CTA banner */
-    .cta-banner {
-      background: linear-gradient(90deg, #00308f, #007FFF);
-      color: white;
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .cta-banner h3 { color: white; margin-bottom: 0.5rem; }
-    .cta-banner p { opacity: 0.9; margin-bottom: 1.2rem; }
-    .cta-banner .store-links { display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; }
-    .cta-banner .store-links a img { height: 40px; border-radius: 8px; }
 
     @media (max-width: 600px) {
       .headword { font-size: 1.7rem; }
       .article-card { padding: 1.2rem 1rem; }
     }
   </style>
+  <link rel="stylesheet" href="../../navigation.css?v=1">
+  <script src="../../navigation.js?v=1" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Learn Norwegian</h1>
-      <div class="links">
-        <a href="../../index.html#download">Download</a>
-        <a href="../../index.html#features">Features</a>
-        <a href="../faq.html">FAQ</a>
-        <a href="../blog.html">Blog</a>
-        <a href="../tools.html" style="font-weight:bold;">Tools</a>
+  <header class="site-header">
+    <a class="site-skip-link" href="#site-content">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav-brand" href="../../index.html" aria-label="Learn Norwegian — Home">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Open navigation" data-open-label="Open navigation" data-close-label="Close navigation" hidden>
+        <span>Menu</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../index.html#features">Features</a></li>
+          <li><a href="../../pages/tools.html" aria-current="location">Tools</a></li>
+          <li><a href="../../pages/blog.html">Blog</a></li>
+          <li><a href="../../pages/faq.html">FAQ</a></li>
+          <li><a href="../../pages/about.html">About</a></li>
+        </ul>
+        <a class="site-nav-cta" href="../../index.html#download">Get the app <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="../../pages/privacy.html">Privacy</a>
+          <a href="../../pages/terms.html">Terms</a>
+        </div>
       </div>
     </nav>
   </header>
 
-  <div class="dict-hero">
+  <div class="dict-hero" id="site-content" tabindex="-1">
     <h2>Norwegian Bokmål Dictionary</h2>
     <p>Search any Norwegian word and see its full definition, inflections, and examples. Powered by the official Ordbøkene database from the University of Bergen.</p>
   </div>
@@ -373,20 +378,43 @@
       Data from <a href="https://ordbokene.no" target="_blank" rel="noopener">Ordbøkene.no</a> — University of Bergen / Språkrådet. For personal and educational use.
     </div>
 
-    <div class="cta-banner">
-      <h3>🇳🇴 Want to actually remember these words?</h3>
-      <p>The <strong>Learn Norwegian</strong> app turns words into flashcards, drills grammar, and builds real fluency — available in Polish, German, Ukrainian, Lithuanian, Spanish, Arabic and English.</p>
-      <p style="font-size:0.9rem;opacity:0.85;margin-bottom:1.2rem;">👇 Tap your store below to download for free:</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone" title="Download on the App Store">
-          <img src="../../assets/AppleLogo.png" alt="Download on the App Store" style="height:50px;border-radius:10px;">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp" title="Get it on Google Play">
-          <img src="../../assets/GoogleLogo.png" alt="Get it on Google Play" style="height:50px;border-radius:10px;">
-        </a>
+    <aside class="app-promo app-promo--mint" aria-labelledby="promo-dictionary-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">7 interface languages</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-dictionary-title">Found a word?<br><em>Make it stick.</em></h3>
+        <p class="app-promo__description">Learn Norwegian with our mobile app. Look up words in the built-in dictionary, then save them straight to your own flashcards. Find it. Save it. Remember it.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Download on the</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Get it on</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Free to download · iOS &amp; Android</p>
       </div>
-      <p style="font-size:0.78rem;opacity:0.7;margin-top:1rem;">Free to download · iOS &amp; Android</p>
-    </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+      <div class="app-promo__languages">
+        <p class="app-promo__languages-label">An app interface in your language</p>
+        <ul class="app-promo__language-list" aria-label="Supported app interface languages" role="list">
+          <li><img src="../../assets/united-kingdom.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="en">English</span></li>
+          <li><img src="../../assets/german.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="de">Deutsch</span></li>
+          <li><img src="../../assets/spain.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="es">Español</span></li>
+          <li><img src="../../assets/poland.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="pl">Polski</span></li>
+          <li><img src="../../assets/lithuania.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="lt">Lietuvių</span></li>
+          <li><img src="../../assets/ukraine.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="uk">Українська</span></li>
+          <li><img src="../../assets/arabic.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="ar" dir="rtl">العربية</span></li>
+        </ul>
+      </div>
+    </aside>
 
   </div>
 

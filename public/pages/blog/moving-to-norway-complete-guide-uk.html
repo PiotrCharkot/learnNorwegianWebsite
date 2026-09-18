@@ -17,7 +17,8 @@
   <link rel="alternate" hreflang="uk" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide-uk.html">
   <link rel="alternate" hreflang="lt" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide-lt.html">
   <link rel="alternate" hreflang="x-default" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide.html">
-  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../styles.css?v=2">
+  <link rel="stylesheet" href="../../app-promo.css">
   <link rel="icon" type="image/png" href="../../assets/favicon.ico">
   <style>
     .article-hero { background: linear-gradient(90deg, #00308f, #007FFF); color: white; padding: 3.5rem 2rem 2.5rem; text-align: center; }
@@ -45,11 +46,6 @@
     .toc li { margin-bottom: 0.3rem; }
     .toc a { color: #007FFF; text-decoration: none; }
     .toc a:hover { text-decoration: underline; }
-    .article-cta { background: linear-gradient(90deg, #00308f, #007FFF); color: white; border-radius: 10px; padding: 2rem; text-align: center; margin: 3rem 0; }
-    .article-cta h3 { color: white; margin-bottom: 0.5rem; }
-    .article-cta p { opacity: 0.9; margin-bottom: 1.2rem; }
-    .article-cta .store-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .article-cta .store-links a img { height: 40px; border-radius: 8px; }
     .breadcrumb { max-width: 800px; margin: 1.2rem auto 0; padding: 0 2rem; font-size: 0.85rem; color: #888; }
     .breadcrumb a { color: #007FFF; text-decoration: none; }
     .breadcrumb a:hover { text-decoration: underline; }
@@ -59,21 +55,39 @@
     .lang-switcher a.active { background: #007FFF; color: white; border-color: #007FFF; }
     @media (max-width: 768px) { .article-hero h2 { font-size: 1.5rem; } .data-table { font-size: 0.82rem; } .data-table th, .data-table td { padding: 0.5rem 0.6rem; } }
   </style>
+  <link rel="stylesheet" href="../../navigation.css?v=1">
+  <script src="../../navigation.js?v=1" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Learn Norwegian</h1>
-      <div class="links">
-        <a href="../../index.html#download">Завантажити</a>
-        <a href="../../index.html#features">Функції</a>
-        <a href="../faq.html">FAQ</a>
-        <a href="../blog.html">Блог</a>
+  <header class="site-header">
+    <a class="site-skip-link" href="#site-content">Перейти до вмісту</a>
+    <nav class="site-nav" aria-label="Основна навігація">
+      <a class="site-nav-brand" href="../../index.html" aria-label="Learn Norwegian — Головна">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Відкрити меню" data-open-label="Відкрити меню" data-close-label="Закрити меню" hidden>
+        <span>Меню</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="../../index.html">Головна</a></li>
+          <li><a href="../../index.html#features">Функції</a></li>
+          <li><a href="../../pages/tools.html">Інструменти</a></li>
+          <li><a href="../../pages/blog.html" aria-current="location">Блог</a></li>
+          <li><a href="../../pages/faq.html">Питання</a></li>
+          <li><a href="../../pages/about.html">Про нас</a></li>
+        </ul>
+        <a class="site-nav-cta" href="../../index.html#download">Завантажити <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="../../pages/privacy.html">Конфіденційність</a>
+          <a href="../../pages/terms.html">Умови</a>
+        </div>
       </div>
     </nav>
   </header>
 
-  <div class="article-hero">
+  <div class="article-hero" id="site-content" tabindex="-1">
     <span class="tag">Путівник для емігрантів</span>
     <h2>Переїзд до Норвегії: Повний практичний посібник для новоприбулих (2026)</h2>
     <p class="meta">Травень 2026 &bull; 15 хв читання &bull; Оновлено даними 2025–2026</p>
@@ -119,20 +133,31 @@
     </div>
 
 
-    <div class="article-cta">
-      <h3><span class="fi fi-no" style="width:1.4em;height:1.05em;display:inline-block;vertical-align:middle;border-radius:3px;"></span> Починайте вивчати норвезьку сьогодні</h3>
-      <p>Зробіть повсякденне життя в Норвегії простішим із Learn Norwegian. Користуйтеся вбудованим словником, додавайте власні слова до флеш-карток, грайте в словесні ігри та вивчайте граматику за допомогою зрозумілих пояснень і вправ. Записуйте свою вимову, порівнюйте її з вимовою носія мови, отримуйте транскрипцію свого запису та читайте практичні тексти норвезькою — усе в одному застосунку.</p>
-      <p style="font-size:0.9rem;opacity:0.85;margin-bottom:1.2rem;">👇 Натисніть на свій магазин нижче, щоб безкоштовно завантажити застосунок:</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
-          <img src="../../assets/AppleLogo.png" alt="Завантажити в App Store">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
-          <img src="../../assets/GoogleLogo.png" alt="Завантажити в Google Play">
-        </a>
+    <aside class="app-promo" aria-labelledby="promo-start-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">Українською</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-start-title">Нове життя в Норвегії.<br><em>Знайдіть свої слова.</em></h3>
+        <p class="app-promo__description">Відкрийте мобільний застосунок для вивчення норвезької з українським інтерфейсом. Додавайте слова зі словника до карток, тренуйте вимову та вчіться через словесні ігри.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Завантажити з</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Завантажити з</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Безкоштовне завантаження · iOS та Android</p>
       </div>
-      <p style="font-size:0.78rem;opacity:0.7;margin-top:1rem;">Безкоштовне завантаження · iOS та Android</p>
-    </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+    </aside>
 
     <h2 id="track1">Крок 1: Визначте свою правову підставу для проживання</h2>
     <p>Найважливіше перше питання — не «яку візу мені потрібно?», а <strong>яка правова підстава дає вам право жити в Норвегії?</strong> Відповідь повністю залежить від вашого громадянства. Існує три основних шляхи:</p>
@@ -151,6 +176,7 @@
 
     <h2 id="permits">Крок 2: Подача заяви на дозвіл (для громадян не з ЄЕЗ)</h2>
     <p>Найпоширеніші типи дозволів для переїзду до Норвегії з-поза ЄЕЗ:</p>
+    <div class="table-scroll" role="region" aria-label="Порівняння дозволів на проживання" tabindex="0">
     <table class="data-table">
       <thead><tr><th>Тип дозволу</th><th>Для кого</th><th>Основні вимоги</th><th>Мито (2026)</th></tr></thead>
       <tbody>
@@ -159,6 +185,7 @@
         <tr><td><strong>Возз'єднання сім'ї</strong></td><td>Партнери, діти та деякі родичі норвезьких/скандинавських/ЄЕЗ мешканців</td><td>Підтверджені стосунки; довідкова особа зазвичай потребує доходу щонайменше 416 512 NOK/рік до оподаткування та наявності житла</td><td>11 500 NOK</td></tr>
       </tbody>
     </table>
+    </div>
     <p>Для кожного типу дозволу є окремий посібник із заявки на сайті UDI (udi.no). Заяви подаються онлайн, після чого проводяться біометричні процедури у центрі VFS Global у вашій країні або в норвезькому посольстві. Після отримання рішення ви їдете до Норвегії та отримуєте <strong>картку проживання</strong> (oppholdskort) у поліції.</p>
 
     <h2 id="registration">Крок 3: Реєстрація після прибуття</h2>
@@ -202,6 +229,7 @@
 
     <h2 id="rent-costs">Крок 6: Скільки коштує оренда?</h2>
     <p>Норвегія — дорога країна, і житло не є винятком. Нижче наведено офіційні дані Статистичного бюро Норвегії (SSB) за 2025 рік — середня щомісячна орендна плата за дворімну квартиру:</p>
+    <div class="table-scroll" role="region" aria-label="Місячна оренда за містами (SSB)" tabindex="0">
     <table class="data-table">
       <thead><tr><th>Місто</th><th>Середня місячна оренда (2 кімнати, 2025)</th></tr></thead>
       <tbody>
@@ -211,8 +239,10 @@
         <tr><td>Ставангер</td><td>11 400 NOK</td></tr>
       </tbody>
     </table>
+    </div>
     <p style="font-size:0.85rem;color:#888;">Джерело: SSB Leiemarkedsundersøkelse 2025, таблиця 09895. Цифри не включають комунальні послуги, якщо не зазначено інше в договорі.</p>
     <p>Для більш широкої картини — індекс Numbeo навесні 2026 року для однокімнатних квартир у центральних районах:</p>
+    <div class="table-scroll" role="region" aria-label="Порівняння оренди в центрі міста (Numbeo)" tabindex="0">
     <table class="data-table">
       <thead><tr><th>Місто</th><th>1 кімната (центр)</th><th>3 кімнати (центр)</th></tr></thead>
       <tbody>
@@ -223,6 +253,7 @@
         <tr><td>Тромсе</td><td>~14 500 NOK</td><td>~25 400 NOK</td></tr>
       </tbody>
     </table>
+    </div>
     <p style="font-size:0.85rem;color:#888;">Джерело: Numbeo весна 2026 (ринковий індикатор, не офіційна статистика).</p>
     <div class="tip-box"><strong>💡 Порада щодо бюджету:</strong> Завжди перевіряйте, що включено в орендну плату. Деякі орендодавці вказують ціну, що включає електрику та опалення (strøm og oppvarming inkludert), інші — ні. Щомісячні комунальні послуги можуть додати 500–2 000 NOK залежно від сезону та енергоефективності будинку.</div>
 
@@ -284,20 +315,31 @@
       <li>Використовуйте флеш-картки для систематичного поповнення словникового запасу</li>
     </ul>
 
-    <div class="article-cta">
-      <h3><span class="fi fi-no" style="width:1.4em;height:1.05em;display:inline-block;vertical-align:middle;border-radius:3px;"></span> Починайте вивчати норвезьку сьогодні</h3>
-      <p>Зробіть повсякденне життя в Норвегії простішим із Learn Norwegian. Користуйтеся вбудованим словником, додавайте власні слова до флеш-карток, грайте в словесні ігри та вивчайте граматику за допомогою зрозумілих пояснень і вправ. Записуйте свою вимову, порівнюйте її з вимовою носія мови, отримуйте транскрипцію свого запису та читайте практичні тексти норвезькою — усе в одному застосунку.</p>
-      <p style="font-size:0.9rem;opacity:0.85;margin-bottom:1.2rem;">👇 Натисніть на свій магазин нижче, щоб безкоштовно завантажити застосунок:</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
-          <img src="../../assets/AppleLogo.png" alt="Завантажити в App Store">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
-          <img src="../../assets/GoogleLogo.png" alt="Завантажити в Google Play">
-        </a>
+    <aside class="app-promo app-promo--dark" aria-labelledby="promo-end-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">Українською</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-end-title">Наступна розмова<br><em>починається з hei.</em></h3>
+        <p class="app-promo__description">Вивчайте норвезьку в мобільному застосунку з українським інтерфейсом. Записуйте речення, порівнюйте вимову з носіями мови та закріплюйте знання вправами з граматики й читанням.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Завантажити з</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Завантажити з</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Безкоштовне завантаження · iOS та Android</p>
       </div>
-      <p style="font-size:0.78rem;opacity:0.7;margin-top:1rem;">Безкоштовне завантаження · iOS та Android</p>
-    </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+    </aside>
 
     <h2 id="checklist">Чеклист переїзду до Норвегії</h2>
     <h3>До переїзду:</h3>

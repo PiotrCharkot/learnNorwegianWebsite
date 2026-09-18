@@ -6,7 +6,8 @@
   <title>Norwegian Irregular Verbs Table – Bokmål | Learn Norwegian</title>
   <meta name="description" content="Complete searchable table of Norwegian irregular (strong) verbs in Bokmål: infinitive, present tense, past tense, and past participle. 120+ verbs grouped by class.">
   <meta name="keywords" content="Norwegian irregular verbs, sterke verb norsk, Norwegian strong verbs, Bokmål verb table, Norwegian past tense, learn Norwegian grammar">
-  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../styles.css?v=2">
+  <link rel="stylesheet" href="../../app-promo.css">
   <link rel="icon" type="image/png" href="../../assets/favicon.ico">
   <style>
     .tool-hero {
@@ -133,39 +134,44 @@
       display: none;
     }
 
-    .cta-banner {
-      background: linear-gradient(90deg, #00308f, #007FFF);
-      color: white;
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      margin: 2rem 0;
-    }
-    .cta-banner h3 { color: white; margin-bottom: 0.5rem; }
-    .cta-banner p { opacity: 0.9; margin-bottom: 1.2rem; }
-    .cta-banner .store-links { display: flex; justify-content: center; align-items: center; gap: 1rem; flex-wrap: wrap; }
-    .cta-banner .store-links a img { height: 40px; border-radius: 8px; }
 
     @media (max-width: 600px) {
       .verb-table thead th, .verb-table tbody td { padding: 0.5rem 0.5rem; font-size: 0.82rem; }
     }
   </style>
+  <link rel="stylesheet" href="../../navigation.css?v=1">
+  <script src="../../navigation.js?v=1" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Learn Norwegian</h1>
-      <div class="links">
-        <a href="../../index.html#download">Download</a>
-        <a href="../../index.html#features">Features</a>
-        <a href="../faq.html">FAQ</a>
-        <a href="../blog.html">Blog</a>
-        <a href="../tools.html" style="font-weight:bold;">Tools</a>
+  <header class="site-header">
+    <a class="site-skip-link" href="#site-content">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav-brand" href="../../index.html" aria-label="Learn Norwegian — Home">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Open navigation" data-open-label="Open navigation" data-close-label="Close navigation" hidden>
+        <span>Menu</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../index.html#features">Features</a></li>
+          <li><a href="../../pages/tools.html" aria-current="location">Tools</a></li>
+          <li><a href="../../pages/blog.html">Blog</a></li>
+          <li><a href="../../pages/faq.html">FAQ</a></li>
+          <li><a href="../../pages/about.html">About</a></li>
+        </ul>
+        <a class="site-nav-cta" href="../../index.html#download">Get the app <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="../../pages/privacy.html">Privacy</a>
+          <a href="../../pages/terms.html">Terms</a>
+        </div>
       </div>
     </nav>
   </header>
 
-  <div class="tool-hero">
+  <div class="tool-hero" id="site-content" tabindex="-1">
     <h2>Norwegian Irregular Verbs</h2>
     <p>120+ common irregular (strong) verbs in Norwegian Bokmål — with infinitive, present tense, past tense, and past participle. Searchable and grouped by vowel-change class.</p>
   </div>
@@ -188,6 +194,7 @@
     <div class="verb-section" data-class="1">
       <h3>Class I — Vowel pattern: i → ei/ai → i</h3>
       <p class="class-desc">Stem vowel <em>i</em> in infinitive → <em>ei</em> or <em>ai</em> in past → <em>i/e</em> in past participle. Often called the "rive" class.</p>
+      <div class="table-scroll" role="region" aria-label="Class I verb forms" tabindex="0">
       <table class="verb-table">
         <thead>
           <tr>
@@ -216,12 +223,14 @@
           <tr><td>tyte</td><td>tyter</td><td>tøt</td><td>tytt</td></tr>
         </tbody>
       </table>
+      </div>
     </div>
 
     <!-- CLASS II: y/øy → au → o (fly/choose type) -->
     <div class="verb-section" data-class="2">
       <h3>Class II — Vowel pattern: y/øy → au → o</h3>
       <p class="class-desc">Stem vowel <em>y</em> or <em>øy</em> in infinitive → <em>au</em> in past → <em>o</em> in past participle. Often called the "fly/lyve" class.</p>
+      <div class="table-scroll" role="region" aria-label="Class II verb forms" tabindex="0">
       <table class="verb-table">
         <thead>
           <tr>
@@ -244,12 +253,14 @@
           <tr><td>tryne</td><td>tryner</td><td>trønte</td><td>trynt</td></tr>
         </tbody>
       </table>
+      </div>
     </div>
 
     <!-- CLASS III: e → a → o (help/begin/sing type) -->
     <div class="verb-section" data-class="3">
       <h3>Class III — Vowel pattern: e → a → o / u</h3>
       <p class="class-desc">Stem vowel <em>e</em> in infinitive → <em>a</em> in past → <em>o/u</em> in past participle. Includes many common everyday verbs.</p>
+      <div class="table-scroll" role="region" aria-label="Class III verb forms" tabindex="0">
       <table class="verb-table">
         <thead>
           <tr>
@@ -287,12 +298,14 @@
           <tr><td>vinne</td><td>vinner</td><td>vant</td><td>vunnet</td></tr>
         </tbody>
       </table>
+      </div>
     </div>
 
     <!-- CLASS IV: e/æ → a → e (bear/come/break type) -->
     <div class="verb-section" data-class="4">
       <h3>Class IV — Vowel pattern: e/æ → a/o → e/o</h3>
       <p class="class-desc">Includes many high-frequency verbs — come, give, take, break, ask, speak, eat.</p>
+      <div class="table-scroll" role="region" aria-label="Class IV verb forms" tabindex="0">
       <table class="verb-table">
         <thead>
           <tr>
@@ -336,12 +349,14 @@
           <tr><td>vite</td><td>vet</td><td>visste</td><td>visst</td></tr>
         </tbody>
       </table>
+      </div>
     </div>
 
     <!-- CLASS V: a → o → a (fall/hold/call type) -->
     <div class="verb-section" data-class="5">
       <h3>Class V — Vowel pattern: a → o/ei → a/å</h3>
       <p class="class-desc">Stem vowel <em>a</em> in infinitive, changes in past tense. Includes fall, hold, blow, grow, hit.</p>
+      <div class="table-scroll" role="region" aria-label="Class V verb forms" tabindex="0">
       <table class="verb-table">
         <thead>
           <tr>
@@ -372,12 +387,14 @@
           <tr><td>vokse</td><td>vokser</td><td>vokste</td><td>vokst</td></tr>
         </tbody>
       </table>
+      </div>
     </div>
 
     <!-- IRREGULAR / Mixed class -->
     <div class="verb-section" data-class="6">
       <h3>Highly Irregular &amp; Mixed</h3>
       <p class="class-desc">Verbs that don't fit neatly into the above classes, or have suppletive/unusual forms. Essential to memorize.</p>
+      <div class="table-scroll" role="region" aria-label="Other irregular verb forms" tabindex="0">
       <table class="verb-table">
         <thead>
           <tr>
@@ -434,21 +451,46 @@
           <tr><td>åpne</td><td>åpner</td><td>åpnet</td><td>åpnet</td></tr>
         </tbody>
       </table>
-    </div>
-
-    <!-- CTA Banner -->
-    <div class="cta-banner">
-      <h3>Practice These Verbs in Context</h3>
-      <p>The Learn Norwegian app has exercises, flashcards and examples for all common irregular verbs — so you build real muscle memory.</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
-          <img src="../../assets/AppleLogo.png" alt="Download on App Store">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
-          <img src="../../assets/GoogleLogo.png" alt="Get it on Google Play">
-        </a>
       </div>
     </div>
+
+    <aside class="app-promo" aria-labelledby="promo-verbs-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">7 interface languages</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-verbs-title">Know the verb.<br><em>Use it with confidence.</em></h3>
+        <p class="app-promo__description">Learn Norwegian with a mobile app that turns grammar into practice. Try exercises, flashcards and reading texts — and build confidence beyond the verb table.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Download on the</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Get it on</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Free to download · iOS &amp; Android</p>
+      </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+      <div class="app-promo__languages">
+        <p class="app-promo__languages-label">An app interface in your language</p>
+        <ul class="app-promo__language-list" aria-label="Supported app interface languages" role="list">
+          <li><img src="../../assets/united-kingdom.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="en">English</span></li>
+          <li><img src="../../assets/german.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="de">Deutsch</span></li>
+          <li><img src="../../assets/spain.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="es">Español</span></li>
+          <li><img src="../../assets/poland.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="pl">Polski</span></li>
+          <li><img src="../../assets/lithuania.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="lt">Lietuvių</span></li>
+          <li><img src="../../assets/ukraine.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="uk">Українська</span></li>
+          <li><img src="../../assets/arabic.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="ar" dir="rtl">العربية</span></li>
+        </ul>
+      </div>
+    </aside>
 
   </div>
 

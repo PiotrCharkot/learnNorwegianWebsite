@@ -19,6 +19,7 @@
   <link rel="alternate" hreflang="es" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide-es.html">
   <link rel="alternate" hreflang="x-default" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide.html">
   <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../app-promo.css">
   <link rel="icon" type="image/png" href="../../assets/favicon.ico">
   <style>
     .article-hero {
@@ -139,24 +140,6 @@
     .toc li { margin-bottom: 0.3rem; }
     .toc a { color: #007FFF; text-decoration: none; }
     .toc a:hover { text-decoration: underline; }
-    .article-cta {
-      background: linear-gradient(90deg, #00308f, #007FFF);
-      color: white;
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      margin: 3rem 0;
-    }
-    .article-cta h3 { color: white; margin-bottom: 0.5rem; }
-    .article-cta p { opacity: 0.9; margin-bottom: 1.2rem; }
-    .article-cta .store-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .article-cta .store-links a img { height: 50px; max-width: 100%; border-radius: 10px; }
-    .article-cta h3 { margin-top: 0; }
-    .article-cta .cta-prompt { font-size: 0.95rem; }
-    .article-cta .cta-note { font-size: 0.85rem; margin: 1rem 0 0; }
-    .article-cta .store-links a { display: inline-flex; border-radius: 10px; }
-    .article-cta .store-links a:hover { opacity: 0.85; }
-    .article-cta .store-links a:focus-visible { outline: 3px solid white; outline-offset: 5px; }
     .table-scroll { overflow-x: auto; margin: 1.5rem 0; }
     .table-scroll:focus-visible { outline: 2px solid #007FFF; outline-offset: 3px; }
     .table-scroll .data-table { margin: 0; min-width: 480px; }
@@ -180,20 +163,38 @@
     .lang-switcher a:hover { background: #e8f3ff; }
     .lang-switcher a.active { background: #007FFF; color: white; border-color: #007FFF; }
   </style>
+  <link rel="stylesheet" href="../../navigation.css?v=1">
+  <script src="../../navigation.js?v=1" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Learn Norwegian</h1>
-      <div class="links">
-        <a href="../../index.html#download">Descargar</a>
-        <a href="../../index.html#features">Funciones</a>
-        <a href="../faq.html">Preguntas frecuentes</a>
-        <a href="../blog.html">Blog</a>
+  <header class="site-header">
+    <a class="site-skip-link" href="#site-content">Saltar al contenido</a>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a class="site-nav-brand" href="../../index.html" aria-label="Learn Norwegian — Inicio">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Abrir menú" data-open-label="Abrir menú" data-close-label="Cerrar menú" hidden>
+        <span>Menú</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="../../index.html">Inicio</a></li>
+          <li><a href="../../index.html#features">Funciones</a></li>
+          <li><a href="../../pages/tools.html">Herramientas</a></li>
+          <li><a href="../../pages/blog.html" aria-current="location">Blog</a></li>
+          <li><a href="../../pages/faq.html">FAQ</a></li>
+          <li><a href="../../pages/about.html">Acerca de</a></li>
+        </ul>
+        <a class="site-nav-cta" href="../../index.html#download">Descargar app <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="../../pages/privacy.html">Privacidad</a>
+          <a href="../../pages/terms.html">Términos</a>
+        </div>
       </div>
     </nav>
   </header>
-  <div class="article-hero">
+  <div class="article-hero" id="site-content" tabindex="-1">
     <span class="tag">Guía para expatriados</span>
     <h2>Mudarse a Noruega: guía práctica completa para recién llegados (2026)</h2>
     <p class="meta">Guía de 2026 &bull; 15 min de lectura &bull; Comparativas de alquileres de 2025–2026</p>
@@ -232,21 +233,31 @@
         <li><a href="#checklist">Tu lista de verificación para la mudanza</a></li>
       </ol>
     </div>
-    <div class="article-cta">
-      <h3><span class="fi fi-no" aria-hidden="true" style="border-radius:3px;"></span> Tu nueva vida en Noruega empieza con las palabras de cada día</h3>
-      <p>En el trabajo, en una tienda o al conocer a tus vecinos, cada palabra cuenta. Prepárate con <strong>Learn Norwegian, disponible en español</strong>: consulta el diccionario integrado, añade tus propias palabras a las tarjetas de repaso y afianza lo que aprendes con juegos de palabras, explicaciones de gramática, ejercicios y textos en noruego.</p>
-      <p>Practica también al hablar: graba tu voz, vuelve a escucharla, compara tu pronunciación con la de un hablante nativo y consulta la transcripción de lo que has dicho. Aprende a tu ritmo y lleva el noruego contigo.</p>
-      <p class="cta-prompt">👇 Toca o haz clic en tu tienda para descargarla gratis:</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone" title="Descargar Learn Norwegian en App Store">
-          <img src="../../assets/AppleLogo.png" alt="Descargar en App Store">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp" title="Descargar Learn Norwegian en Google Play">
-          <img src="../../assets/GoogleLogo.png" alt="Descargar en Google Play">
-        </a>
+    <aside class="app-promo" aria-labelledby="promo-start-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">En español</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-start-title">Tu nueva vida en Noruega.<br><em>Encuentra tus palabras.</em></h3>
+        <p class="app-promo__description">Descubre la app móvil para aprender noruego, con la interfaz en español. Guarda palabras del diccionario en tus tarjetas, practica la pronunciación y aprende con juegos de vocabulario.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Descárgala en</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Consíguela en</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Descarga gratuita · iOS y Android</p>
       </div>
-      <p class="cta-note">Descarga gratuita · iOS y Android · Disponible en español</p>
-    </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+    </aside>
 
     <h2 id="track1">Paso 1: Entender tu base legal de residencia</h2>
     <p>La primera pregunta, y la más importante, no es «¿qué visado necesito?», sino <strong>¿qué base legal me permite vivir en Noruega?</strong> La respuesta depende de tu ciudadanía y de tu situación. Existen tres vías principales:</p>
@@ -410,21 +421,31 @@
       <li>Busca un intercambio de idiomas, un café de conversación o un grupo local para practicar.</li>
       <li>Repasa vocabulario con tarjetas y prioriza las palabras frecuentes y útiles para tu vida, en lugar de memorizar listas alfabéticas.</li>
     </ul>
-    <div class="article-cta">
-      <h3><span class="fi fi-no" aria-hidden="true" style="border-radius:3px;"></span> Da el siguiente paso: empieza a hablar noruego</h3>
-      <p>Convierte lo que aprendes en palabras que puedas usar. Con <strong>Learn Norwegian, disponible en español</strong>, busca vocabulario en el diccionario integrado y añade tus propias palabras a las tarjetas de repaso. Refuerza lo aprendido con juegos de palabras, explicaciones de gramática, ejercicios y textos en noruego.</p>
-      <p>¿Quieres ganar confianza al hablar? Graba tu voz, escucha tu pronunciación, compárala con la de un hablante nativo y consulta la transcripción de lo que has dicho. Todo en una sola aplicación, para seguir practicando a tu ritmo.</p>
-      <p class="cta-prompt">👇 Toca o haz clic en tu tienda para descargarla gratis:</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone" title="Descargar Learn Norwegian en App Store">
-          <img src="../../assets/AppleLogo.png" alt="Descargar en App Store">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp" title="Descargar Learn Norwegian en Google Play">
-          <img src="../../assets/GoogleLogo.png" alt="Descargar en Google Play">
-        </a>
+    <aside class="app-promo app-promo--dark" aria-labelledby="promo-end-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">En español</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-end-title">Tu próxima conversación<br><em>empieza con hei.</em></h3>
+        <p class="app-promo__description">Aprende noruego a tu ritmo con nuestra app móvil en español. Graba frases, compara tu pronunciación con la de hablantes nativos y afianza lo aprendido con ejercicios de gramática y lecturas.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Descárgala en</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Consíguela en</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Descarga gratuita · iOS y Android</p>
       </div>
-      <p class="cta-note">Descarga gratuita · iOS y Android · Disponible en español</p>
-    </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+    </aside>
     <h2 id="checklist">Tu lista de verificación para la mudanza a Noruega</h2>
     <p>Utiliza esta lista para seguir tus avances. Los plazos de las citas y los trámites pueden variar; algunas gestiones dependerán de que hayas completado otras antes.</p>
     <h3>Antes de mudarte:</h3>

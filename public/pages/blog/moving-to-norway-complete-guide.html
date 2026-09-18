@@ -17,7 +17,8 @@
   <link rel="alternate" hreflang="uk" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide-uk.html">
   <link rel="alternate" hreflang="lt" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide-lt.html">
   <link rel="alternate" hreflang="x-default" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide.html">
-  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../styles.css?v=2">
+  <link rel="stylesheet" href="../../app-promo.css">
   <link rel="icon" type="image/png" href="../../assets/favicon.ico">
   <style>
     .article-hero {
@@ -138,18 +139,6 @@
     .toc li { margin-bottom: 0.3rem; }
     .toc a { color: #007FFF; text-decoration: none; }
     .toc a:hover { text-decoration: underline; }
-    .article-cta {
-      background: linear-gradient(90deg, #00308f, #007FFF);
-      color: white;
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      margin: 3rem 0;
-    }
-    .article-cta h3 { color: white; margin-bottom: 0.5rem; }
-    .article-cta p { opacity: 0.9; margin-bottom: 1.2rem; }
-    .article-cta .store-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .article-cta .store-links a img { height: 40px; border-radius: 8px; }
     .breadcrumb {
       max-width: 800px;
       margin: 1.2rem auto 0;
@@ -169,21 +158,39 @@
     .lang-switcher a:hover { background: #e8f3ff; }
     .lang-switcher a.active { background: #007FFF; color: white; border-color: #007FFF; }
   </style>
+  <link rel="stylesheet" href="../../navigation.css?v=1">
+  <script src="../../navigation.js?v=1" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Learn Norwegian</h1>
-      <div class="links">
-        <a href="../../index.html#download">Download</a>
-        <a href="../../index.html#features">Features</a>
-        <a href="../faq.html">FAQ</a>
-        <a href="../blog.html">Blog</a>
+  <header class="site-header">
+    <a class="site-skip-link" href="#site-content">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav-brand" href="../../index.html" aria-label="Learn Norwegian — Home">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Open navigation" data-open-label="Open navigation" data-close-label="Close navigation" hidden>
+        <span>Menu</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../index.html#features">Features</a></li>
+          <li><a href="../../pages/tools.html">Tools</a></li>
+          <li><a href="../../pages/blog.html" aria-current="location">Blog</a></li>
+          <li><a href="../../pages/faq.html">FAQ</a></li>
+          <li><a href="../../pages/about.html">About</a></li>
+        </ul>
+        <a class="site-nav-cta" href="../../index.html#download">Get the app <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="../../pages/privacy.html">Privacy</a>
+          <a href="../../pages/terms.html">Terms</a>
+        </div>
       </div>
     </nav>
   </header>
 
-  <div class="article-hero">
+  <div class="article-hero" id="site-content" tabindex="-1">
     <span class="tag">Expats' Guide</span>
     <h2>Moving to Norway: The Complete Practical Guide for Newcomers (2026)</h2>
     <p class="meta">May 2026 &bull; 15 min read &bull; Updated with 2025–2026 data</p>
@@ -233,20 +240,31 @@
       </ol>
     </div>
 
-    <div class="article-cta">
-      <h3><span class="fi fi-no" style="border-radius:3px;"></span> Start Learning Norwegian Today</h3>
-      <p>Make everyday life in Norway easier with Learn Norwegian. Look up words in the built-in dictionary, save your own flashcards, play word games, and practise grammar with clear explanations and exercises. Record your pronunciation, compare it with a native speaker, get a transcription of what you said, and read practical Norwegian texts — all in one app.</p>
-      <p style="font-size:0.9rem;opacity:0.85;margin-bottom:1.2rem;">👇 Tap your store below to download for free:</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
-          <img src="../../assets/AppleLogo.png" alt="Download on App Store">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
-          <img src="../../assets/GoogleLogo.png" alt="Get it on Google Play">
-        </a>
+    <aside class="app-promo" aria-labelledby="promo-start-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">In English &amp; more</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-start-title">New life in Norway.<br><em>Find your words.</em></h3>
+        <p class="app-promo__description">Meet your mobile app for learning Norwegian. Save dictionary words to flashcards, practise speaking and learn through word games.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Download on the</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Get it on</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Free to download · iOS &amp; Android</p>
       </div>
-      <p style="font-size:0.78rem;opacity:0.7;margin-top:1rem;">Free to download · iOS &amp; Android</p>
-    </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+    </aside>
 
     <!-- SECTION 1 -->
     <h2 id="track1">Step 1: Understanding Your Residence Basis</h2>
@@ -284,6 +302,7 @@
       The most common permit types for people moving to Norway from outside the EEA are:
     </p>
 
+    <div class="table-scroll" role="region" aria-label="Residence permit comparison" tabindex="0">
     <table class="data-table">
       <thead>
         <tr>
@@ -314,6 +333,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
 
     <p>
       Each permit type has a dedicated application guide on UDI's website (udi.no). Applications are submitted online and followed up with biometrics at a VFS Global application centre in your country, or at a Norwegian embassy.
@@ -393,6 +413,7 @@
       Norway is an expensive country by any measure, and housing is no exception. Below are official figures from Statistics Norway (SSB) for 2025, showing the average monthly rent for a two-room apartment (approximately one bedroom):
     </p>
 
+    <div class="table-scroll" role="region" aria-label="Monthly rent by city (SSB)" tabindex="0">
     <table class="data-table">
       <thead>
         <tr>
@@ -407,12 +428,14 @@
         <tr><td>Stavanger</td><td>11,400 NOK</td></tr>
       </tbody>
     </table>
+    </div>
     <p style="font-size:0.85rem;color:#888;">Source: SSB Leiemarkedsundersøkelse 2025, table 09895. Note: figures do not include utilities (electricity, heating, water) unless specified in individual contracts.</p>
 
     <p>
       For a broader picture across more cities and apartment sizes, the Numbeo market index for spring 2026 gives the following indicative figures for <em>one-bedroom apartments in central areas</em>:
     </p>
 
+    <div class="table-scroll" role="region" aria-label="City-centre rent comparison (Numbeo)" tabindex="0">
     <table class="data-table">
       <thead>
         <tr>
@@ -429,6 +452,7 @@
         <tr><td>Tromsø</td><td>~14,500 NOK</td><td>~25,400 NOK</td></tr>
       </tbody>
     </table>
+    </div>
     <p style="font-size:0.85rem;color:#888;">Source: Numbeo spring 2026 (market indicator, not official statistics). Use as a directional guide only.</p>
 
     <div class="tip-box">
@@ -547,20 +571,31 @@
       <li>Use flashcards to build vocabulary systematically — frequency-first, not alphabet-first</li>
     </ul>
 
-    <div class="article-cta">
-      <h3><span class="fi fi-no" style="border-radius:3px;"></span> Start Learning Norwegian Today</h3>
-      <p>Make everyday life in Norway easier with Learn Norwegian. Look up words in the built-in dictionary, save your own flashcards, play word games, and practise grammar with clear explanations and exercises. Record your pronunciation, compare it with a native speaker, get a transcription of what you said, and read practical Norwegian texts — all in one app.</p>
-      <p style="font-size:0.9rem;opacity:0.85;margin-bottom:1.2rem;">👇 Tap your store below to download for free:</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
-          <img src="../../assets/AppleLogo.png" alt="Download on App Store">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
-          <img src="../../assets/GoogleLogo.png" alt="Get it on Google Play">
-        </a>
+    <aside class="app-promo app-promo--dark" aria-labelledby="promo-end-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">In English &amp; more</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-end-title">Your next conversation<br><em>starts with hei.</em></h3>
+        <p class="app-promo__description">Learn Norwegian at your pace with our mobile app. Record a sentence, compare it with a native speaker, and practise with grammar exercises and reading.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Download on the</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Get it on</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Free to download · iOS &amp; Android</p>
       </div>
-      <p style="font-size:0.78rem;opacity:0.7;margin-top:1rem;">Free to download · iOS &amp; Android</p>
-    </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+    </aside>
 
     <!-- SECTION 12: Checklist -->
     <h2 id="checklist">Your Moving-to-Norway Checklist</h2>

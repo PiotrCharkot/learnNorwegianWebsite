@@ -115,21 +115,39 @@
       .blog-card { width: calc(50% - 0.75rem); }
     }
   </style>
+  <link rel="stylesheet" href="../navigation.css?v=1">
+  <script src="../navigation.js?v=1" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Learn Norwegian</h1>
-      <div class="links">
-        <a href="../index.html#download">Download</a>
-        <a href="../index.html#features">Features</a>
-        <a href="faq.html">FAQ</a>
-        <a href="blog.html" style="font-weight:bold;">Blog</a>
+  <header class="site-header">
+    <a class="site-skip-link" href="#site-content">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav-brand" href="../index.html" aria-label="Learn Norwegian — Home">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Open navigation" data-open-label="Open navigation" data-close-label="Close navigation" hidden>
+        <span>Menu</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#features">Features</a></li>
+          <li><a href="../pages/tools.html">Tools</a></li>
+          <li><a href="../pages/blog.html" aria-current="page">Blog</a></li>
+          <li><a href="../pages/faq.html">FAQ</a></li>
+          <li><a href="../pages/about.html">About</a></li>
+        </ul>
+        <a class="site-nav-cta" href="../index.html#download">Get the app <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="../pages/privacy.html">Privacy</a>
+          <a href="../pages/terms.html">Terms</a>
+        </div>
       </div>
     </nav>
   </header>
 
-  <div class="blog-hero">
+  <div class="blog-hero" id="site-content" tabindex="-1">
     <h2>Tips, Guides &amp; Expat Advice</h2>
     <p>Practical articles to help you learn Norwegian, move to Norway, and thrive as an expat. Updated regularly.</p>
   </div>

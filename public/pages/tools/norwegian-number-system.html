@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norwegian Number System — Numbers, Dates & Prices | Learn Norwegian</title>
+  <meta name="description" content="Learn Norwegian numbers with a free Bokmål converter and clear reference tables. Explore counting, ordinals, years, prices and phone numbers.">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../tools-learning.css">
+  <link rel="stylesheet" href="../../app-promo.css">
+  <link rel="stylesheet" href="../../navigation.css?v=1">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <script src="../../navigation.js?v=1" defer></script>
+  <script type="module" src="../../norwegian-numbers.js"></script>
+</head>
+<body class="learning-page">
+  <header class="site-header">
+    <a class="site-skip-link" href="#site-content">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav-brand" href="../../index.html" aria-label="Learn Norwegian — Home">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Open navigation" data-open-label="Open navigation" data-close-label="Close navigation" hidden>
+        <span>Menu</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../index.html#features">Features</a></li>
+          <li><a href="../../pages/tools.html" aria-current="location">Tools</a></li>
+          <li><a href="../../pages/blog.html">Blog</a></li>
+          <li><a href="../../pages/faq.html">FAQ</a></li>
+          <li><a href="../../pages/about.html">About</a></li>
+        </ul>
+        <a class="site-nav-cta" href="../../index.html#download">Get the app <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="../../pages/privacy.html">Privacy</a>
+          <a href="../../pages/terms.html">Terms</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="learning-main" id="site-content" tabindex="-1">
+    <a class="learning-back" href="../tools.html">← All Norwegian tools</a>
+
+    <div class="learning-hero">
+      <div>
+        <p class="learning-eyebrow">Free learning tool / Norwegian Bokmål</p>
+        <h1>Norwegian numbers.<br><em>Make them count.</em></h1>
+        <p class="learning-intro">A price at the café. A date in your calendar. Your new phone number. Get comfortable with the numbers you use every day.</p>
+        <nav class="learning-jumps" aria-label="On this page">
+          <a href="#number-converter">Try the converter ↓</a>
+          <a href="#number-reference">Number tables ↓</a>
+          <a href="#everyday-numbers">Everyday examples ↓</a>
+        </nav>
+      </div>
+      <div class="learning-visual" aria-hidden="true">
+        <span><b>01</b><small lang="nb">en</small></span>
+        <span><b>21</b><small lang="nb">tjueen</small></span>
+        <span><b>101</b><small lang="nb">ett hundre og en</small></span>
+      </div>
+    </div>
+
+    <section class="learning-panel" id="number-converter" aria-labelledby="converter-heading">
+      <h2 id="converter-heading">How do you say it?</h2>
+      <p class="learning-panel-intro">Pick a number type, enter your digits, and see them in Norwegian.</p>
+      <noscript><p class="learning-callout">Enable JavaScript to use the converter. All the tables and explanations below are available without it.</p></noscript>
+      <form id="number-form" novalidate>
+        <div class="learning-form-grid">
+          <div class="learning-field">
+            <label for="number-mode">Number type</label>
+            <select id="number-mode">
+              <option value="cardinal">Counting numbers</option>
+              <option value="ordinal">Ordinal numbers</option>
+              <option value="year">Years</option>
+              <option value="price">Prices</option>
+              <option value="phone">Phone numbers</option>
+            </select>
+          </div>
+          <div class="learning-field">
+            <label for="number-input" id="number-label">Number</label>
+            <input id="number-input" value="1250" type="text" inputmode="numeric" maxlength="30" autocomplete="off" aria-describedby="number-hint number-status">
+            <span class="learning-help" id="number-hint">Whole numbers from 0 to 999 999.</span>
+          </div>
+          <button class="learning-primary" type="submit">Show in Norwegian <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="learning-examples"><span>Try a number:</span><div class="learning-examples" id="number-samples" style="margin:0"></div></div>
+      </form>
+      <p class="learning-status" id="number-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div class="number-result" id="number-result" hidden>
+        <p class="learning-eyebrow">In Norwegian · Bokmål</p>
+        <p class="number-result__digits" id="number-digits"></p>
+        <p class="number-result__words" id="number-words" lang="nb"></p>
+        <p class="number-result__note" id="number-note"></p>
+      </div>
+    </section>
+
+    <section class="learning-section" id="number-reference" aria-labelledby="reference-heading">
+      <p class="learning-eyebrow">01 / The building blocks</p>
+      <h2 id="reference-heading">Start with zero to twenty.</h2>
+      <p>These are the words you will keep coming back to. After twenty, you can start putting the pieces together.</p>
+      <div class="learning-grid">
+        <div class="learning-table-wrap">
+          <table class="learning-table">
+            <caption>Numbers 0–10</caption>
+            <thead><tr><th scope="col">Number</th><th scope="col">Bokmål</th></tr></thead>
+            <tbody>
+              <tr><td>0</td><td lang="nb">null</td></tr>
+              <tr><td>1</td><td lang="nb">en / ei / ett</td></tr>
+              <tr><td>2</td><td lang="nb">to</td></tr>
+              <tr><td>3</td><td lang="nb">tre</td></tr>
+              <tr><td>4</td><td lang="nb">fire</td></tr>
+              <tr><td>5</td><td lang="nb">fem</td></tr>
+              <tr><td>6</td><td lang="nb">seks</td></tr>
+              <tr><td>7</td><td lang="nb">sju</td></tr>
+              <tr><td>8</td><td lang="nb">åtte</td></tr>
+              <tr><td>9</td><td lang="nb">ni</td></tr>
+              <tr><td>10</td><td lang="nb">ti</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="learning-table-wrap">
+          <table class="learning-table">
+            <caption>Numbers 11–20</caption>
+            <thead><tr><th scope="col">Number</th><th scope="col">Bokmål</th></tr></thead>
+            <tbody>
+              <tr><td>11</td><td lang="nb">elleve</td></tr>
+              <tr><td>12</td><td lang="nb">tolv</td></tr>
+              <tr><td>13</td><td lang="nb">tretten</td></tr>
+              <tr><td>14</td><td lang="nb">fjorten</td></tr>
+              <tr><td>15</td><td lang="nb">femten</td></tr>
+              <tr><td>16</td><td lang="nb">seksten</td></tr>
+              <tr><td>17</td><td lang="nb">sytten</td></tr>
+              <tr><td>18</td><td lang="nb">atten</td></tr>
+              <tr><td>19</td><td lang="nb">nitten</td></tr>
+              <tr><td>20</td><td lang="nb">tjue</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="learning-callout"><strong>One has a few forms.</strong> Say <span lang="nb">en bil</span> (one car), <span lang="nb">ei bok</span> (one book) and <span lang="nb">ett hus</span> (one house). The choice follows the noun’s gender. Accented <span lang="nb">én</span> makes “one” especially clear. You can also use <span lang="nb">en bok</span> in Bokmål.</div>
+    </section>
+
+    <section class="learning-section" aria-labelledby="bigger-heading">
+      <p class="learning-eyebrow">02 / Put the pieces together</p>
+      <h2 id="bigger-heading">Small patterns. Bigger numbers.</h2>
+      <div class="learning-grid">
+        <div class="learning-card">
+          <span class="learning-step">TENS + ONES</span>
+          <h3>Twenty + three = one word.</h3>
+          <p class="learning-example" lang="nb">23 → tjuetre</p>
+          <p>Put the tens first, then the ones, with no space or “and”. The same pattern gives you <span lang="nb">førtiseks</span> (46) and <span lang="nb">nittini</span> (99).</p>
+        </div>
+        <div class="learning-card">
+          <span class="learning-step">HUNDREDS + OG</span>
+          <h3>A little “and” goes a long way.</h3>
+          <p class="learning-example" lang="nb">325 → tre hundre og tjuefem</p>
+          <p>Use <span lang="nb">og</span> before a final part below one hundred: <span lang="nb">ett hundre og fem</span> (105), or <span lang="nb">to tusen og ti</span> (2 010).</p>
+        </div>
+      </div>
+      <div class="learning-table-wrap" tabindex="0" role="region" aria-label="Tens and larger numbers">
+        <table class="learning-table">
+          <caption>Your next set of building blocks</caption>
+          <thead><tr><th scope="col">Number</th><th scope="col">Bokmål</th><th scope="col">Example</th></tr></thead>
+          <tbody>
+            <tr><td>20</td><td lang="nb">tjue</td><td lang="nb">21 · tjueen</td></tr>
+            <tr><td>30</td><td lang="nb">tretti</td><td lang="nb">32 · trettito</td></tr>
+            <tr><td>40</td><td lang="nb">førti</td><td lang="nb">43 · førtitre</td></tr>
+            <tr><td>50</td><td lang="nb">femti</td><td lang="nb">54 · femtifire</td></tr>
+            <tr><td>60</td><td lang="nb">seksti</td><td lang="nb">65 · sekstifem</td></tr>
+            <tr><td>70</td><td lang="nb">sytti</td><td lang="nb">76 · syttiseks</td></tr>
+            <tr><td>80</td><td lang="nb">åtti</td><td lang="nb">87 · åttisju</td></tr>
+            <tr><td>90</td><td lang="nb">nitti</td><td lang="nb">98 · nittiåtte</td></tr>
+            <tr><td>100</td><td lang="nb">ett hundre</td><td lang="nb">200 · to hundre</td></tr>
+            <tr><td>1 000</td><td lang="nb">ett tusen</td><td lang="nb">3 000 · tre tusen</td></tr>
+            <tr><td>1 000 000</td><td lang="nb">en million</td><td lang="nb">2 000 000 · to millioner</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="learning-callout"><strong>Heard a different version?</strong> <span lang="nb">Syv</span> for 7 and <span lang="nb">tyve</span> for 20 are also used. This tool sticks to <span lang="nb">sju</span>, <span lang="nb">tjue</span> and the modern tens-first order so you can learn one consistent pattern.</p>
+    </section>
+
+    <aside class="app-promo app-promo--mint" aria-labelledby="promo-numbers-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">7 languages</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-numbers-title">A little practice.<br><em>A lot more confidence.</em></h3>
+        <p class="app-promo__description">Learn Norwegian with our mobile app. Build your vocabulary with flashcards, put grammar into practice and record your voice to compare it with a native speaker.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Download on the</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Get it on</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Free to download · iOS &amp; Android</p>
+      </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+      <div class="app-promo__languages">
+        <p class="app-promo__languages-label">The whole app, in your language</p>
+        <ul class="app-promo__language-list" aria-label="Available app languages" role="list">
+          <li><img src="../../assets/united-kingdom.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="en">English</span></li>
+          <li><img src="../../assets/german.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="de">Deutsch</span></li>
+          <li><img src="../../assets/spain.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="es">Español</span></li>
+          <li><img src="../../assets/poland.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="pl">Polski</span></li>
+          <li><img src="../../assets/lithuania.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="lt">Lietuvių</span></li>
+          <li><img src="../../assets/ukraine.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="uk">Українська</span></li>
+          <li><img src="../../assets/arabic.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="ar" dir="rtl">العربية</span></li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="learning-section" id="everyday-numbers" aria-labelledby="everyday-heading">
+      <p class="learning-eyebrow">03 / Numbers in real life</p>
+      <h2 id="everyday-heading">From the classroom to the café.</h2>
+      <div class="learning-grid">
+        <div class="learning-card">
+          <span class="learning-step">DATES &amp; POSITIONS</span>
+          <h3>First, second, third…</h3>
+          <p class="learning-example" lang="nb">17. mai → syttende mai</p>
+          <p>An ordinal tells you the position, not the quantity. Add a dot after the digit: <span lang="nb">1.</span> is <span lang="nb">første</span>, <span lang="nb">2.</span> is <span lang="nb">andre</span>, <span lang="nb">3.</span> is <span lang="nb">tredje</span>. Month names start with a lowercase letter.</p>
+        </div>
+        <div class="learning-card">
+          <span class="learning-step">YEARS</span>
+          <h3>Two ways to think about a year.</h3>
+          <p class="learning-example" lang="nb">1998 → nitten nittiåtte</p>
+          <p>Older years are often read in two parts. For 2026, <span lang="nb">to tusen og tjueseks</span> works. Spaces here show the spoken parts; when spelling a year out in writing, join it: <span lang="nb">nittennittiåtte</span>.</p>
+        </div>
+        <div class="learning-card">
+          <span class="learning-step">PRICES</span>
+          <h3>A comma, not a decimal point.</h3>
+          <p class="learning-example" lang="nb">49,50 kr</p>
+          <p>The full reading is <span lang="nb">førtini kroner og femti øre</span>. In a shop you may simply hear <span lang="nb">førtini femti</span>. Group thousands with spaces: <span lang="nb">1 250,50 kr</span>.</p>
+        </div>
+        <div class="learning-card">
+          <span class="learning-step">PHONE NUMBERS</span>
+          <h3>Slow and clear is a good start.</h3>
+          <p class="learning-example" lang="nb">12 → en · to</p>
+          <p>Read one digit at a time when sharing a number. Keep any zeros: <span lang="nb">null</span>. Once you are comfortable, practise pairs, too: <span lang="nb">12</span> can be read as <span lang="nb">tolv</span>.</p>
+        </div>
+      </div>
+      <div class="learning-table-wrap" tabindex="0" role="region" aria-label="Common Norwegian ordinals">
+        <table class="learning-table">
+          <caption>Ordinals worth knowing</caption>
+          <thead><tr><th scope="col">Position</th><th scope="col">Bokmål</th><th scope="col">English</th></tr></thead>
+          <tbody>
+            <tr><td>1.</td><td lang="nb">første</td><td>first</td></tr>
+            <tr><td>2.</td><td lang="nb">andre</td><td>second</td></tr>
+            <tr><td>3.</td><td lang="nb">tredje</td><td>third</td></tr>
+            <tr><td>4.</td><td lang="nb">fjerde</td><td>fourth</td></tr>
+            <tr><td>5.</td><td lang="nb">femte</td><td>fifth</td></tr>
+            <tr><td>6.</td><td lang="nb">sjette</td><td>sixth</td></tr>
+            <tr><td>7.</td><td lang="nb">sjuende / syvende</td><td>seventh</td></tr>
+            <tr><td>8.</td><td lang="nb">åttende</td><td>eighth</td></tr>
+            <tr><td>9.</td><td lang="nb">niende</td><td>ninth</td></tr>
+            <tr><td>10.</td><td lang="nb">tiende</td><td>tenth</td></tr>
+            <tr><td>20.</td><td lang="nb">tjuende</td><td>twentieth</td></tr>
+            <tr><td>21.</td><td lang="nb">tjueførste</td><td>twenty-first</td></tr>
+            <tr><td>30.</td><td lang="nb">trettiende</td><td>thirtieth</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div class="learning-sources">
+      <p>This guide uses Bokmål, not Nynorsk. The converter offers a consistent reading, not every regional or spoken alternative. Numbers are converted in your browser and are not sent to a server.</p>
+      <p>Further reading: NTNU LearnNoW on <a href="https://www.ntnu.edu/learnnow/2/extras">counting numbers</a> and <a href="https://www.ntnu.edu/learnnow/4/extras">ordinals and dates</a>.</p>
+    </div>
+    <nav class="learning-related" aria-label="More Norwegian tools">
+      <a href="norwegian-verb-conjugator.html">Explore verb forms →</a>
+      <a href="norwegian-dictionary.html">Look up a word →</a>
+    </nav>
+
+  </main>
+  <footer>
+    <p>&copy; 2026 Learn Norwegian. All rights reserved.</p>
+    <p>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms and Conditions</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../tools.html">Tools</a>
+    </p>
+  </footer>
+</body>
+</html>

@@ -17,7 +17,8 @@
   <link rel="alternate" hreflang="uk" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide-uk.html">
   <link rel="alternate" hreflang="lt" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide-lt.html">
   <link rel="alternate" hreflang="x-default" href="https://learnnorwegianapp.com/pages/blog/moving-to-norway-complete-guide.html">
-  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../styles.css?v=2">
+  <link rel="stylesheet" href="../../app-promo.css">
   <link rel="icon" type="image/png" href="../../assets/favicon.ico">
   <style>
     .article-hero { background: linear-gradient(90deg, #00308f, #007FFF); color: white; padding: 3.5rem 2rem 2.5rem; text-align: center; }
@@ -45,11 +46,6 @@
     .toc li { margin-bottom: 0.3rem; }
     .toc a { color: #007FFF; text-decoration: none; }
     .toc a:hover { text-decoration: underline; }
-    .article-cta { background: linear-gradient(90deg, #00308f, #007FFF); color: white; border-radius: 10px; padding: 2rem; text-align: center; margin: 3rem 0; }
-    .article-cta h3 { color: white; margin-bottom: 0.5rem; }
-    .article-cta p { opacity: 0.9; margin-bottom: 1.2rem; }
-    .article-cta .store-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-    .article-cta .store-links a img { height: 40px; border-radius: 8px; }
     .breadcrumb { max-width: 800px; margin: 1.2rem auto 0; padding: 0 2rem; font-size: 0.85rem; color: #888; }
     .breadcrumb a { color: #007FFF; text-decoration: none; }
     .breadcrumb a:hover { text-decoration: underline; }
@@ -59,21 +55,39 @@
     .lang-switcher a.active { background: #007FFF; color: white; border-color: #007FFF; }
     @media (max-width: 768px) { .article-hero h2 { font-size: 1.5rem; } .data-table { font-size: 0.82rem; } .data-table th, .data-table td { padding: 0.5rem 0.6rem; } }
   </style>
+  <link rel="stylesheet" href="../../navigation.css?v=1">
+  <script src="../../navigation.js?v=1" defer></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <h1>Learn Norwegian</h1>
-      <div class="links">
-        <a href="../../index.html#download">Atsisiųsti</a>
-        <a href="../../index.html#features">Funkcijos</a>
-        <a href="../faq.html">DUK</a>
-        <a href="../blog.html">Tinklaraštis</a>
+  <header class="site-header">
+    <a class="site-skip-link" href="#site-content">Pereiti prie turinio</a>
+    <nav class="site-nav" aria-label="Pagrindinė navigacija">
+      <a class="site-nav-brand" href="../../index.html" aria-label="Learn Norwegian — Pradžia">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Atidaryti meniu" data-open-label="Atidaryti meniu" data-close-label="Uždaryti meniu" hidden>
+        <span>Meniu</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="../../index.html">Pradžia</a></li>
+          <li><a href="../../index.html#features">Funkcijos</a></li>
+          <li><a href="../../pages/tools.html">Įrankiai</a></li>
+          <li><a href="../../pages/blog.html" aria-current="location">Tinklaraštis</a></li>
+          <li><a href="../../pages/faq.html">DUK</a></li>
+          <li><a href="../../pages/about.html">Apie mus</a></li>
+        </ul>
+        <a class="site-nav-cta" href="../../index.html#download">Atsisiųsti <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="../../pages/privacy.html">Privatumas</a>
+          <a href="../../pages/terms.html">Sąlygos</a>
+        </div>
       </div>
     </nav>
   </header>
 
-  <div class="article-hero">
+  <div class="article-hero" id="site-content" tabindex="-1">
     <span class="tag">Emigrantų vadovas</span>
     <h2>Persikėlimas į Norvegiją: Išsamus praktinis vadovas naujakuriams (2026)</h2>
     <p class="meta">2026 gegužė &bull; 15 min. skaitymo &bull; Atnaujinta 2025–2026 m. duomenimis</p>
@@ -119,20 +133,31 @@
     </div>
 
 
-    <div class="article-cta">
-      <h3><span class="fi fi-no" style="width:1.4em;height:1.05em;display:inline-block;vertical-align:middle;border-radius:3px;"></span> Pradėkite mokytis norvegų kalbos šiandien</h3>
-      <p>Palengvinkite kasdienį gyvenimą Norvegijoje su „Learn Norwegian“. Naudokitės integruotu žodynu, išsaugokite savo žodžius kortelėse, žaiskite žodžių žaidimus ir mokykitės gramatikos naudodami aiškius paaiškinimus bei pratimus. Įrašykite savo tarimą, palyginkite jį su gimtakalbio tarimu, gaukite savo įrašo transkripciją ir skaitykite praktinius norvegiškus tekstus — viskas vienoje programėlėje.</p>
-      <p style="font-size:0.9rem;opacity:0.85;margin-bottom:1.2rem;">👇 Bakstelėkite savo parduotuvę, kad nemokamai atsisiųstumėte programėlę:</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
-          <img src="../../assets/AppleLogo.png" alt="Atsisiųsti App Store">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
-          <img src="../../assets/GoogleLogo.png" alt="Atsisiųsti Google Play">
-        </a>
+    <aside class="app-promo" aria-labelledby="promo-start-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">Lietuviškai</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-start-title">Naujas gyvenimas Norvegijoje.<br><em>Atraskite savo žodžius.</em></h3>
+        <p class="app-promo__description">Atraskite mobiliąją programėlę norvegų kalbai mokytis — su lietuviška sąsaja. Išsaugokite žodyno žodžius mokymosi kortelėse, lavinkite tarimą ir mokykitės žaisdami.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Atsisiųsti iš</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Atsisiųsti iš</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Atsisiųskite nemokamai · iOS ir Android</p>
       </div>
-      <p style="font-size:0.78rem;opacity:0.7;margin-top:1rem;">Nemokamas atsisiuntimas · iOS ir Android</p>
-    </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+    </aside>
 
     <h2 id="track1">1 žingsnis: Nustatykite savo teisinio buvimo pagrindą</h2>
     <p>Svarbiausias pirmasis klausimas nėra „kokios vizos man reikia?" — o <strong>koks teisinis pagrindas suteikia jums teisę gyventi Norvegijoje?</strong> Atsakymas visiškai priklauso nuo jūsų pilietybės. Yra trys pagrindiniai keliai:</p>
@@ -151,6 +176,7 @@
 
     <h2 id="permits">2 žingsnis: Leidimo prašymas (ne EEE piliečiams)</h2>
     <p>Dažniausi leidimų tipai persikėlimui į Norvegiją iš ne EEE šalių:</p>
+    <div class="table-scroll" role="region" aria-label="Leidimų gyventi palyginimas" tabindex="0">
     <table class="data-table">
       <thead><tr><th>Leidimo tipas</th><th>Kam skirtas</th><th>Pagrindiniai reikalavimai</th><th>Mokestis (2026)</th></tr></thead>
       <tbody>
@@ -159,6 +185,7 @@
         <tr><td><strong>Šeimos susijungimas</strong></td><td>Partneriai, vaikai ir tam tikri artimieji Norvegijos/Šiaurės šalių/EEE gyventojų</td><td>Patvirtinti santykiai; referencinis asmuo paprastai turi gauti bent 416 512 NOK/metus iki mokesčių ir turėti būstą</td><td>11 500 NOK</td></tr>
       </tbody>
     </table>
+    </div>
     <p>Kiekvienam leidimo tipui yra atskiras paraiškos vadovas UDI svetainėje (udi.no). Paraiškos teikiamos internetu, vėliau atliekama biometrinė procedūra VFS Global centre jūsų šalyje arba Norvegijos ambasadoje. Gavę sprendimą, vykstate į Norvegiją ir policijoje atsiimate <strong>gyvenamojo leidimo kortelę</strong> (oppholdskort).</p>
 
     <h2 id="registration">3 žingsnis: Registracija po atvykimo</h2>
@@ -202,6 +229,7 @@
 
     <h2 id="rent-costs">6 žingsnis: Kiek kainuoja nuoma?</h2>
     <p>Norvegija — brangi šalis, ir būstas nėra išimtis. Žemiau pateikti oficialūs Norvegijos statistikos (SSB) duomenys už 2025 m. — vidutinis mėnesinis nuomos mokestis už dviejų kambarių butą:</p>
+    <div class="table-scroll" role="region" aria-label="Mėnesio nuoma pagal miestą (SSB)" tabindex="0">
     <table class="data-table">
       <thead><tr><th>Miestas</th><th>Vidutinis mėnesinis nuomos mokestis (2 kambariai, 2025)</th></tr></thead>
       <tbody>
@@ -211,8 +239,10 @@
         <tr><td>Stavangeris</td><td>11 400 NOK</td></tr>
       </tbody>
     </table>
+    </div>
     <p style="font-size:0.85rem;color:#888;">Šaltinis: SSB Leiemarkedsundersøkelse 2025, lentelė 09895. Skaičiai neapima komunalinių paslaugų, jei nenurodyta kitaip sutartyje.</p>
     <p>Platesnis vaizdas — Numbeo rinkos indeksas 2026 m. pavasariui vieno miegamojo butams centrinėse zonose:</p>
+    <div class="table-scroll" role="region" aria-label="Nuomos miesto centre palyginimas (Numbeo)" tabindex="0">
     <table class="data-table">
       <thead><tr><th>Miestas</th><th>1 miegamasis (centras)</th><th>3 miegamieji (centras)</th></tr></thead>
       <tbody>
@@ -223,6 +253,7 @@
         <tr><td>Tromsė</td><td>~14 500 NOK</td><td>~25 400 NOK</td></tr>
       </tbody>
     </table>
+    </div>
     <p style="font-size:0.85rem;color:#888;">Šaltinis: Numbeo 2026 m. pavasaris (rinkos indikatorius, ne oficiali statistika).</p>
     <div class="tip-box"><strong>💡 Biudžeto patarimas:</strong> Visada patikrinkite, kas įskaičiuota į nuomą. Kai kurie nuomotojai nurodo nuomą, apimančią elektrą ir šildymą (strøm og oppvarming inkludert), kiti — ne. Mėnesinės komunalinės paslaugos gali pridėti 500–2 000 NOK priklausomai nuo sezono ir pastato energinio efektyvumo.</div>
 
@@ -284,20 +315,31 @@
       <li>Naudokite korteles žodyno sisteminiam plėtimui — pagal dažnumą, ne abėcėlę</li>
     </ul>
 
-    <div class="article-cta">
-      <h3><span class="fi fi-no" style="width:1.4em;height:1.05em;display:inline-block;vertical-align:middle;border-radius:3px;"></span> Pradėkite mokytis norvegų kalbos šiandien</h3>
-      <p>Palengvinkite kasdienį gyvenimą Norvegijoje su „Learn Norwegian“. Naudokitės integruotu žodynu, išsaugokite savo žodžius kortelėse, žaiskite žodžių žaidimus ir mokykitės gramatikos naudodami aiškius paaiškinimus bei pratimus. Įrašykite savo tarimą, palyginkite jį su gimtakalbio tarimu, gaukite savo įrašo transkripciją ir skaitykite praktinius norvegiškus tekstus — viskas vienoje programėlėje.</p>
-      <p style="font-size:0.9rem;opacity:0.85;margin-bottom:1.2rem;">👇 Bakstelėkite savo parduotuvę, kad nemokamai atsisiųstumėte programėlę:</p>
-      <div class="store-links">
-        <a href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
-          <img src="../../assets/AppleLogo.png" alt="Atsisiųsti App Store">
-        </a>
-        <a href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
-          <img src="../../assets/GoogleLogo.png" alt="Atsisiųsti Google Play">
-        </a>
+    <aside class="app-promo app-promo--dark" aria-labelledby="promo-end-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">Lietuviškai</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-end-title">Kitas jūsų pokalbis<br><em>prasideda nuo hei.</em></h3>
+        <p class="app-promo__description">Mokykitės norvegų kalbos mobiliojoje programėlėje su lietuviška sąsaja. Įrašykite sakinius, palyginkite tarimą su gimtakalbio įrašu ir įtvirtinkite žinias gramatikos pratimais bei skaitymu.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Atsisiųsti iš</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Atsisiųsti iš</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Atsisiųskite nemokamai · iOS ir Android</p>
       </div>
-      <p style="font-size:0.78rem;opacity:0.7;margin-top:1rem;">Nemokamas atsisiuntimas · iOS ir Android</p>
-    </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+    </aside>
 
     <h2 id="checklist">Persikėlimo į Norvegiją kontrolinis sąrašas</h2>
     <h3>Prieš persikeldami:</h3>

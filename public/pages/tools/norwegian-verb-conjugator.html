@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norwegian Verb Conjugator — Bokmål Verb Forms | Learn Norwegian</title>
+  <meta name="description" content="Look up Norwegian Bokmål verb forms from the official dictionary. See present, past, participles and imperative, with clear grammar examples for learners.">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../tools-learning.css">
+  <link rel="stylesheet" href="../../app-promo.css">
+  <link rel="stylesheet" href="../../navigation.css?v=1">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <script src="../../navigation.js?v=1" defer></script>
+  <script type="module" src="../../norwegian-verbs.js"></script>
+</head>
+<body class="learning-page">
+  <header class="site-header">
+    <a class="site-skip-link" href="#site-content">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav-brand" href="../../index.html" aria-label="Learn Norwegian — Home">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Open navigation" data-open-label="Open navigation" data-close-label="Close navigation" hidden>
+        <span>Menu</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../index.html#features">Features</a></li>
+          <li><a href="../../pages/tools.html" aria-current="location">Tools</a></li>
+          <li><a href="../../pages/blog.html">Blog</a></li>
+          <li><a href="../../pages/faq.html">FAQ</a></li>
+          <li><a href="../../pages/about.html">About</a></li>
+        </ul>
+        <a class="site-nav-cta" href="../../index.html#download">Get the app <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="../../pages/privacy.html">Privacy</a>
+          <a href="../../pages/terms.html">Terms</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="learning-main learning-main--verbs" id="site-content" tabindex="-1">
+    <a class="learning-back" href="../tools.html">← All Norwegian tools</a>
+
+    <div class="learning-hero">
+      <div>
+        <p class="learning-eyebrow">Free learning tool / Norwegian Bokmål</p>
+        <h1>One verb.<br><em>Find its forms.</em></h1>
+        <p class="learning-intro">From <span lang="nb">å snakke</span> to <span lang="nb">snakket</span>. Look up a Norwegian verb, see how it changes, and make sense of the patterns.</p>
+        <nav class="learning-jumps" aria-label="On this page">
+          <a href="#verb-conjugator">Look up a verb ↓</a>
+          <a href="#verb-guide">Understand the forms ↓</a>
+          <a href="#verb-patterns">See the patterns ↓</a>
+        </nav>
+      </div>
+      <div class="learning-visual" aria-hidden="true">
+        <span><small>Today</small><b lang="nb">snakker</b></span>
+        <span><small>Yesterday</small><b lang="nb">snakket</b></span>
+        <span><small>Already</small><b lang="nb">har snakket</b></span>
+      </div>
+    </div>
+
+    <section class="learning-panel" id="verb-conjugator" aria-labelledby="conjugator-heading">
+      <h2 id="conjugator-heading">Norwegian Verb Conjugator</h2>
+      <p class="learning-panel-intro">Real dictionary forms, for regular and irregular verbs. Powered by Bokmålsordboka.</p>
+      <noscript><p class="learning-callout">Enable JavaScript to look up verbs. You can still use all the reference tables below or visit <a href="https://ordbokene.no/">Ordbøkene</a> directly.</p></noscript>
+      <form id="verb-form" novalidate>
+        <div class="learning-form-grid verb-form-grid">
+          <div class="learning-field">
+            <label for="verb-input">Norwegian verb</label>
+            <input id="verb-input" type="search" placeholder="For example: snakke, være, gikk…" maxlength="65" autocomplete="off" autocapitalize="none" spellcheck="false" aria-describedby="verb-hint verb-status">
+          </div>
+          <button class="learning-primary" type="submit">Find verb forms <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="learning-help" id="verb-hint">Use an infinitive (with or without å), or a form you have seen. Bokmål only. An internet connection is needed for lookup.</p>
+        <div class="learning-examples">
+          <span>Try a verb:</span>
+          <button class="learning-chip" type="button" data-verb="snakke" lang="nb">snakke</button>
+          <button class="learning-chip" type="button" data-verb="være" lang="nb">være</button>
+          <button class="learning-chip" type="button" data-verb="gå" lang="nb">gå</button>
+          <button class="learning-chip" type="button" data-verb="lese" lang="nb">lese</button>
+          <button class="learning-chip" type="button" data-verb="bo" lang="nb">bo</button>
+          <button class="learning-chip" type="button" data-verb="kunne" lang="nb">kunne</button>
+        </div>
+      </form>
+      <p class="learning-status" id="verb-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div id="verb-results" aria-label="Verb forms" role="region" aria-busy="false"></div>
+      <div class="verb-welcome" id="verb-welcome">
+        <div class="verb-mini-timeline" lang="nb"><span>lese</span><span aria-hidden="true">→</span><span>leser</span><span aria-hidden="true">→</span><span>leste</span><span aria-hidden="true">→</span><span>lest</span></div>
+        <p><strong>Four forms. A useful starting point.</strong></p>
+        <p>Search above for the infinitive, present, past and past participle. Open the extra forms for the imperative and more. Accepted alternatives appear together.</p>
+      </div>
+      <div class="learning-sources">
+        <p>Data: <a href="https://ordbokene.no/">Bokmålsordboka, Universitetet i Bergen og Språkrådet, ordbøkene.no</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Inflections originate in Norsk ordbank. We regroup the forms, deduplicate alternatives and add English labels; definitions remain in Norwegian.</p>
+        <p>Only current standard forms supplied by the dictionary are shown. Different spellings and meanings stay separate. The dictionary search is sent to ord.uib.no when you submit a verb.</p>
+      </div>
+    </section>
+
+    <section class="learning-section" id="verb-guide" aria-labelledby="guide-heading">
+      <p class="learning-eyebrow">01 / Get your bearings</p>
+      <h2 id="guide-heading">What do the forms actually do?</h2>
+      <p>Start with one familiar verb. These examples use <span lang="nb">lese</span>, “to read”.</p>
+      <div class="learning-grid">
+        <div class="learning-card">
+          <span class="learning-step">INFINITIV / INFINITIVE</span>
+          <h3>The dictionary form.</h3>
+          <p class="learning-example" lang="nb">Jeg liker å lese.</p>
+          <p>I like to read. The infinitive often follows <span lang="nb">å</span>. After a modal such as <span lang="nb">kan</span> or <span lang="nb">skal</span>, leave <span lang="nb">å</span> out: <span lang="nb">Jeg kan lese.</span></p>
+        </div>
+        <div class="learning-card">
+          <span class="learning-step">PRESENS / PRESENT</span>
+          <h3>Now, or as a habit.</h3>
+          <p class="learning-example" lang="nb">Jeg leser hver kveld.</p>
+          <p>I read every evening. Many verbs add <span lang="nb">-r</span> to the infinitive. The verb stays the same with <span lang="nb">jeg, du, hun, vi</span> and the other pronouns.</p>
+        </div>
+        <div class="learning-card">
+          <span class="learning-step">PRETERITUM / PAST</span>
+          <h3>A finished moment in the past.</h3>
+          <p class="learning-example" lang="nb">Jeg leste i går.</p>
+          <p>I read yesterday. Learn this form with the verb: some follow a pattern, while others change much more, like <span lang="nb">gå → gikk</span>.</p>
+        </div>
+        <div class="learning-card">
+          <span class="learning-step">PERFEKTUM PARTISIPP / PAST PARTICIPLE</span>
+          <h3>A building block, not a tense on its own.</h3>
+          <p class="learning-example" lang="nb">Jeg har lest boka.</p>
+          <p>I have read the book. Here, <span lang="nb">har</span> plus <span lang="nb">lest</span> makes the present perfect. The lookup shows the participle itself, without the helping verb.</p>
+        </div>
+      </div>
+      <div class="learning-callout"><strong>One less thing to memorise.</strong> Norwegian verbs do not change for each person: <span lang="nb">jeg leser, du leser, vi leser</span>. Learn the tense form once and use it with every subject.</div>
+    </section>
+
+    <aside class="app-promo app-promo--dark" aria-labelledby="promo-conjugator-title">
+      <div class="app-promo__content">
+        <div class="app-promo__brand">
+          <span class="app-promo__flag" aria-hidden="true"></span>
+          <span>Learn Norwegian</span>
+          <span class="app-promo__language">7 languages</span>
+        </div>
+        <h3 class="app-promo__title" id="promo-conjugator-title">Found the right form?<br><em>Put it to work.</em></h3>
+        <p class="app-promo__description">Learn Norwegian with our mobile app. Turn grammar explanations into practice, save new words to flashcards and build confidence with reading and speaking exercises.</p>
+        <div class="app-promo__stores">
+          <a class="app-promo__store" href="https://apps.apple.com/us/app/learn-norwegian-now/id6504736023?platform=iphone">
+            <img src="../../assets/AppleLogo.png" width="32" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Download on the</small><strong>App Store</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="app-promo__store" href="https://play.google.com/store/apps/details?id=com.piotrcharkot.LearnNorwegianApp">
+            <img src="../../assets/GoogleLogo.png" width="29" height="32" loading="lazy" decoding="async" alt="">
+            <span class="app-promo__store-label"><small>Get it on</small><strong>Google Play</strong></span>
+            <span class="app-promo__arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <p class="app-promo__note">Free to download · iOS &amp; Android</p>
+      </div>
+      <div class="app-promo__art" aria-hidden="true"><span lang="no">hei.</span><i></i></div>
+      <div class="app-promo__languages">
+        <p class="app-promo__languages-label">The whole app, in your language</p>
+        <ul class="app-promo__language-list" aria-label="Available app languages" role="list">
+          <li><img src="../../assets/united-kingdom.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="en">English</span></li>
+          <li><img src="../../assets/german.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="de">Deutsch</span></li>
+          <li><img src="../../assets/spain.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="es">Español</span></li>
+          <li><img src="../../assets/poland.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="pl">Polski</span></li>
+          <li><img src="../../assets/lithuania.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="lt">Lietuvių</span></li>
+          <li><img src="../../assets/ukraine.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="uk">Українська</span></li>
+          <li><img src="../../assets/arabic.png" width="22" height="22" loading="lazy" decoding="async" alt=""><span lang="ar" dir="rtl">العربية</span></li>
+        </ul>
+      </div>
+    </aside>
+
+    <section class="learning-section" id="verb-patterns" aria-labelledby="patterns-heading">
+      <p class="learning-eyebrow">02 / Spot the pattern</p>
+      <h2 id="patterns-heading">Regular does not mean identical.</h2>
+      <p>These common patterns help you recognise forms. They are a guide, not a rule for guessing every unfamiliar verb—use the lookup to check.</p>
+      <div class="learning-table-wrap" tabindex="0" role="region" aria-label="Common regular verb patterns">
+        <table class="learning-table">
+          <caption>Four useful regular patterns</caption>
+          <thead><tr><th scope="col">Pattern</th><th scope="col">Infinitive</th><th scope="col">Present</th><th scope="col">Past</th><th scope="col">Past participle</th></tr></thead>
+          <tbody>
+            <tr><td>-et / -a</td><td lang="nb">snakke</td><td lang="nb">snakker</td><td lang="nb">snakket / snakka</td><td lang="nb">snakket / snakka</td></tr>
+            <tr><td>-te / -t</td><td lang="nb">lese</td><td lang="nb">leser</td><td lang="nb">leste</td><td lang="nb">lest</td></tr>
+            <tr><td>-de / -d</td><td lang="nb">prøve</td><td lang="nb">prøver</td><td lang="nb">prøvde</td><td lang="nb">prøvd</td></tr>
+            <tr><td>-dde / -dd</td><td lang="nb">bo</td><td lang="nb">bor</td><td lang="nb">bodde</td><td lang="nb">bodd</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="learning-help">Some verbs have additional accepted alternatives. The live lookup includes alternatives returned by the dictionary; this table focuses on the patterns.</p>
+      <div class="learning-table-wrap" tabindex="0" role="region" aria-label="Essential irregular Norwegian verbs">
+        <table class="learning-table">
+          <caption>Start with these everyday irregular verbs</caption>
+          <thead><tr><th scope="col">Meaning</th><th scope="col">Infinitive</th><th scope="col">Present</th><th scope="col">Past</th><th scope="col">Past participle</th></tr></thead>
+          <tbody>
+            <tr><td>be</td><td lang="nb">være</td><td lang="nb">er</td><td lang="nb">var</td><td lang="nb">vært</td></tr>
+            <tr><td>have</td><td lang="nb">ha</td><td lang="nb">har</td><td lang="nb">hadde</td><td lang="nb">hatt</td></tr>
+            <tr><td>go / walk</td><td lang="nb">gå</td><td lang="nb">går</td><td lang="nb">gikk</td><td lang="nb">gått</td></tr>
+            <tr><td>do / make</td><td lang="nb">gjøre</td><td lang="nb">gjør</td><td lang="nb">gjorde</td><td lang="nb">gjort</td></tr>
+            <tr><td>see</td><td lang="nb">se</td><td lang="nb">ser</td><td lang="nb">så</td><td lang="nb">sett</td></tr>
+            <tr><td>write</td><td lang="nb">skrive</td><td lang="nb">skriver</td><td lang="nb">skrev</td><td lang="nb">skrevet</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p><a href="norwegian-irregular-verbs.html">Explore the full irregular verb table →</a></p>
+    </section>
+
+    <section class="learning-section" aria-labelledby="sentences-heading">
+      <p class="learning-eyebrow">03 / Put it in a sentence</p>
+      <h2 id="sentences-heading">The little words make a difference.</h2>
+      <div class="learning-grid">
+        <div class="learning-card">
+          <h3>A plan for later.</h3>
+          <p class="learning-example" lang="nb">Jeg skal lese i kveld.</p>
+          <p>I am going to read tonight. <span lang="nb">Skal</span> + infinitive is useful for plans. It is one way to talk about the future, not a special ending added to the verb.</p>
+        </div>
+        <div class="learning-card">
+          <h3>A simple instruction.</h3>
+          <p class="learning-example" lang="nb">Les teksten!</p>
+          <p>Read the text! This is the imperative. With many verbs ending in <span lang="nb">-e</span>, remove that final letter. Check the extra forms above for the dictionary’s entry.</p>
+        </div>
+      </div>
+    </section>
+    <div class="learning-sources">
+      <p>Grammar reading: NTNU’s <a href="https://www.ntnu.edu/now/1/grammar">present tense introduction</a>, <a href="https://www.ntnu.edu/now/5/grammar">past tense guide</a> and <a href="https://www.ntnu.edu/learnnow/8/grammar/">present perfect and future</a>. The example sentences on this page are learning examples, not dictionary quotations.</p>
+    </div>
+    <nav class="learning-related" aria-label="More Norwegian tools">
+      <a href="norwegian-number-system.html">Get comfortable with numbers →</a>
+      <a href="norwegian-dictionary.html">Search the full dictionary →</a>
+    </nav>
+
+  </main>
+  <footer>
+    <p>&copy; 2026 Learn Norwegian. All rights reserved.</p>
+    <p>
+      <a href="../privacy.html">Privacy Policy</a>
+      <a href="../terms.html">Terms and Conditions</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../tools.html">Tools</a>
+    </p>
+  </footer>
+</body>
+</html>

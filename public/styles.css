@@ -20,30 +20,6 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
-header {
-    background: linear-gradient(90deg, #00308f, #007FFF);
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header nav h1 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-}
-
-header .links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 1rem;
-}
-
-header .links a:hover {
-    text-decoration: underline;
-}
-
 section {
     padding: 2rem;
 }
@@ -191,6 +167,20 @@ footer a:hover {
     margin-bottom: 5rem; /* Add margin at the bottom to prevent content from being hidden behind the footer */
 }
 
+
+/* Keep long guide headings and tables from widening the whole page on phones. */
+.article-body { overflow-wrap: break-word; }
+.table-scroll {
+    max-width: 100%;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #72859f #eef2f8;
+}
+.table-scroll > .data-table { margin: 0; }
+.verb-section .table-scroll { margin: 0; }
+.table-scroll:focus-visible { outline: 3px solid #b24d1d; outline-offset: 4px; }
 
 @media (max-width: 768px) {
     .features .feature-item {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,12 +17,40 @@
       #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
       @media (max-width: 600px) {
         body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
       }
     </style>
-  </head>
+    <link rel="stylesheet" href="/navigation.css?v=1">
+  <script src="/navigation.js?v=1" defer></script>
+</head>
   <body>
-    <div id="message">
+  <header class="site-header">
+    <a class="site-skip-link" href="#message">Skip to content</a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="site-nav-brand" href="/index.html" aria-label="Learn Norwegian — Home">
+        <span class="site-brand-mark" aria-hidden="true"></span>
+        <span class="site-brand-name" lang="en">Learn Norwegian</span>
+      </a>
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation-panel" aria-label="Open navigation" data-open-label="Open navigation" data-close-label="Close navigation" hidden>
+        <span>Menu</span><span class="site-menu-icon" aria-hidden="true"></span>
+      </button>
+      <div class="site-nav-panel" id="site-navigation-panel">
+        <ul class="site-nav-links" role="list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/index.html#features">Features</a></li>
+          <li><a href="/pages/tools.html">Tools</a></li>
+          <li><a href="/pages/blog.html">Blog</a></li>
+          <li><a href="/pages/faq.html">FAQ</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+        </ul>
+        <a class="site-nav-cta" href="/index.html#download">Get the app <span aria-hidden="true">↗</span></a>
+        <div class="site-nav-legal">
+          <a href="/pages/privacy.html">Privacy</a>
+          <a href="/pages/terms.html">Terms</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <div id="message" tabindex="-1">
       <h2>404</h2>
       <h1>Page Not Found</h1>
       <p>The specified file was not found on this website. Please check the URL for mistakes and try again.</p>
